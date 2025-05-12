@@ -1,9 +1,7 @@
-import React from "react";
-
 const Banner = () => {
   return (
     <section
-      id="home"
+      id="banner"
       className="relative bg-cover bg-center h-screen"
       style={{ backgroundImage: "url('/path-to-your-image.jpg')" }}
     >
