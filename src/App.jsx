@@ -1,16 +1,21 @@
-import React from "react";
-import Main from "./Layout/Main";
 import Navbar from "./components/Ui/Navbar";
 import Footer from "./components/Ui/Footer";
+import Banner from "./Sections/Home/Banner";
+import Service from "./Sections/Home/Service";
+import AboutUs from "./Sections/Home/AboutUs";
+import Reviews from "./Sections/Home/Reviews";
+import ContactUs from "./Sections/Home/ContactUs";
 
 const App = () => {
   return (
-    <div className="flex flex-col h-screen">
+    <div>
       <Navbar />
-      <Main />
-      <div className="mt-auto">
-        <Footer />
-      </div>
+      <Banner />
+      <Service />
+      <AboutUs />
+      <Reviews />
+      <ContactUs />
+      <Footer />
     </div>
   );
 };
