@@ -6,15 +6,17 @@ import AboutUs from "./Sections/Home/AboutUs";
 import Reviews from "./Sections/Home/Reviews";
 import ContactUs from "./Sections/Home/ContactUs";
 import Laundry from "./Sections/Home/Laundry";
+import Experience from "./Sections/Home/Experience";
 
 const App = () => {
   return (
     <div>
       <Navbar />
       <Banner />
-      <Laundry/>
-      <Service />
+      <Laundry />
+      <Experience />
       <AboutUs />
+      <Service />
       <Reviews />
       <ContactUs />
       <Footer />
