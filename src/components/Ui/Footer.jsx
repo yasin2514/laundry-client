@@ -1,87 +1,122 @@
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import React from "react";
+import { motion } from "framer-motion";
+import logo from "../../assets/react.svg"; // Replace with your actual logo path
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Footer Navbar Section */}
-        <div className="flex flex-col md:flex-row justify-between mb-8">
-          <div className="flex flex-col items-center md:items-start">
-            <h4 className="text-xl font-bold mb-4">Quick Links</h4>
-            <ul className="space-y-4">
+    <footer className="bg-gradient-to-r from-[#0d0314] to-[#1a1f4b] text-white py-12">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="max-w-7xl mx-auto px-4"
+      >
+        {/* Main Grid Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+          {/* Logo + Address */}
+          <div className="text-center lg:text-left">
+            <img
+              src={logo}
+              alt="Company Logo"
+              className="w-24 h-24 mx-auto lg:mx-0 rounded-full border-2 border-white shadow-md mb-4"
+            />
+            <p className="text-sm text-gray-300 leading-relaxed">
+              <strong className="text-white">Clock Tower Laundry</strong>
+              <br />
+              123 Main Street, Dhaka, Bangladesh
+              <br />
+              info@clocktowerlaundry.com
+              <br />
+              +880 1774 647257
+            </p>
+          </div>
+
+          {/* Quick Shortcuts */}
+          <div className="text-center lg:text-left">
+            <h4 className="text-lg font-semibold mb-4">Quick Shortcuts</h4>
+            <ul className="space-y-2 text-sm text-gray-200">
+              {["Home", "About Us", "Services", "Reviews", "Contact Us"].map(
+                (item, idx) => (
+                  <li key={idx}>
+                    <a
+                      href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                      className="hover:text-yellow-300 transition duration-300"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+
+          {/* Company Policies */}
+          <div className="text-center lg:text-left">
+            <h4 className="text-lg font-semibold mb-4">Company Policy</h4>
+            <ul className="space-y-2 text-sm text-gray-200">
               <li>
-                <a href="#home" className="hover:text-green-500">
-                  Home
+                <a
+                  href="#privacy-policy"
+                  className="hover:text-yellow-300 transition"
+                >
+                  Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#about-us" className="hover:text-green-500">
-                  About Us
+                <a
+                  href="#terms-conditions"
+                  className="hover:text-yellow-300 transition"
+                >
+                  Terms & Conditions
                 </a>
               </li>
               <li>
-                <a href="#service" className="hover:text-green-500">
-                  Services
+                <a
+                  href="#refund-policy"
+                  className="hover:text-yellow-300 transition"
+                >
+                  Refund Policy
                 </a>
               </li>
               <li>
-                <a href="#reviews" className="hover:text-green-500">
-                  Reviews
-                </a>
-              </li>
-              <li>
-                <a href="#contact-us" className="hover:text-green-500">
-                  Contact Us
+                <a
+                  href="#delivery-policy"
+                  className="hover:text-yellow-300 transition"
+                >
+                  Delivery Policy
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Social Media Links */}
-          <div className="flex justify-center md:justify-end mt-8 md:mt-0">
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-blue-600 mx-4"
-            >
-              <FaFacebook size={30} />
-            </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-pink-600 mx-4"
-            >
-              <FaInstagram size={30} />
-            </a>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-blue-400 mx-4"
-            >
-              <FaTwitter size={30} />
-            </a>
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-blue-700 mx-4"
-            >
-              <FaLinkedin size={30} />
-            </a>
+          {/* Contact Info */}
+          <div className="text-center lg:text-left">
+            <h4 className="text-lg font-semibold mb-4">Contact & Support</h4>
+            <p className="text-sm text-gray-300 leading-relaxed">
+              Got questions or need help? We're here for you 24/7.
+              <br />
+              Email: support@clocktowerlaundry.com
+              <br />
+              Hotline: +880 1999 123456
+            </p>
           </div>
         </div>
 
-        {/* Footer Copyright Section */}
-        <div className="text-center">
-          <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Laundry Service. All rights
+        {/* Bottom Section */}
+        <div className="border-t border-white/20 pt-6 text-center text-sm text-gray-400">
+          <p>
+            &copy; {new Date().getFullYear()} Clock Tower Laundry. All rights
             reserved.
           </p>
+          <p className="mt-2">
+            Designed & Developed by{" "}
+            <span className="text-gray-300 font-semibold">
+              @Yasin Khan Rabbi
+            </span>
+          </p>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };

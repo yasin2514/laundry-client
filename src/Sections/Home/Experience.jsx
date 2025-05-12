@@ -77,7 +77,7 @@ const Experience = () => {
               href="https://wa.me/966XXXXXXXXX"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 bg-[#25D366] text-white rounded-full text-lg font-semibold hover:bg-[#20b954] transition "
+              className="inline-flex items-center justify-center px-6 py-3 bg-[#584b80] text-white rounded-full text-lg font-semibold hover:bg-[#46396a] transition "
             >
               <FaWhatsapp className="mr-2 text-2xl" />
               Chat on WhatsApp

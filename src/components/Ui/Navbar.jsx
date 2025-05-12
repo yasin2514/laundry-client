@@ -9,7 +9,7 @@ const Navbar = () => {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className="w-full bg-[#4b3f6e] shadow-md z-50">
+    <div id="home" className="w-full bg-[#4b3f6e] shadow-md z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 lg:px-8 py-4">
         {/* Logo */}
         <div className="flex-1">
