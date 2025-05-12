@@ -9,7 +9,7 @@ const Navbar = () => {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className="w-full bg-[#43307e] shadow-md z-50">
+    <div className="w-full bg-[#4b3f6e] shadow-md z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 lg:px-8 py-4">
         {/* Logo */}
         <div className="flex-1">
@@ -20,20 +20,34 @@ const Navbar = () => {
 
         {/* Desktop Nav Links */}
         <div className="hidden lg:flex gap-8 justify-center flex-1">
-          {["banner", "about-us", "service", "contact-us"].map((section) => (
+          {["Home", "about-us", "service", "contact-us"].map((section) => (
             <Link
               key={section}
               to={section}
               smooth={true}
               duration={500}
               offset={-80}
-              className="cursor-pointer text-white font-medium hover:text-gray-200 transition-colors"
+              className="cursor-pointer text-white font-medium relative group"
             >
-              {section
-                .replace("-", " ")
-                .replace(/\b\w/g, (l) => l.toUpperCase())}
+              <span>
+                {section
+                  .replace("-", " ")
+                  .replace(/\b\w/g, (l) => l.toUpperCase())}
+              </span>
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
+        </div>
+
+        {/* Contact (desktop) */}
+        <div className="hidden lg:flex items-center gap-3 bg-[#6c5f8d] text-white p-2 rounded-2xl shadow-md ml-4">
+          <div className="text-white text-3xl">
+            <FaWhatsapp />
+          </div>
+          <div className="leading-tight">
+            <p className="font-semibold text-sm">Call to Schedule!</p>
+            <p className="text-base font-bold">+9099479474747</p>
+          </div>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -43,23 +57,12 @@ const Navbar = () => {
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
-
-        {/* Contact (desktop) */}
-        <div className="hidden lg:flex items-center gap-3 bg-[#6042b9] text-white p-2 rounded-2xl shadow-md ml-4">
-          <div className="text-white text-3xl">
-            <FaWhatsapp />
-          </div>
-          <div className="leading-tight">
-            <p className="font-semibold text-sm">Call to Schedule!</p>
-            <p className="text-base font-bold">+9099479474747</p>
-          </div>
-        </div>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-[#43307e] text-white px-6 pb-4 space-y-4">
-          {["banner", "about-us", "service", "contact-us"].map((section) => (
+        <div className="lg:hidden bg-[#4b3f6e] text-white px-6 pb-4 space-y-4">
+          {["Home", "about-us", "service", "contact-us"].map((section) => (
             <Link
               key={section}
               to={section}
@@ -67,14 +70,19 @@ const Navbar = () => {
               duration={500}
               offset={-80}
               onClick={closeMenu}
-              className="block cursor-pointer font-medium hover:text-gray-200 transition-colors"
+              className="block font-medium relative group"
             >
-              {section
-                .replace("-", " ")
-                .replace(/\b\w/g, (l) => l.toUpperCase())}
+              <span>
+                {section
+                  .replace("-", " ")
+                  .replace(/\b\w/g, (l) => l.toUpperCase())}
+              </span>
+              <span className="block h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
-          <div className="flex items-center gap-3 bg-[#6042b9]  text-white p-2 rounded-xl shadow-md">
+
+          {/* Contact (mobile) */}
+          <div className="flex items-center gap-3 bg-[#9c8cb9] text-white p-2 rounded-xl shadow-md">
             <div className="text-white text-2xl">
               <FaWhatsapp />
             </div>
