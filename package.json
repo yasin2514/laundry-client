@@ -8,10 +8,11 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-     "start": "vite"
+    "start": "vite"
   },
   "dependencies": {
     "daisyui": "^5.0.35",
+    "framer-motion": "^12.11.0",
     "localforage": "^1.10.0",
     "match-sorter": "^8.0.1",
     "react": "^19.1.0",
