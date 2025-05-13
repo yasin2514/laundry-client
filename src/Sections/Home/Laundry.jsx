@@ -1,6 +1,6 @@
 import React from "react";
 import img from "../../assets/img1.avif";
-import { FaTshirt, FaCheckCircle, FaTruck } from "react-icons/fa";
+import { FaTshirt, FaCheckCircle, FaTruck, FaLeaf } from "react-icons/fa"; // Added FaLeaf for Eco-Friendly
 import { motion } from "framer-motion";
 
 const primaryColor = "#61597a";
@@ -9,24 +9,26 @@ const Laundry = () => {
   return (
     <div className="bg-white w-full py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center lg:flex lg:items-center lg:justify-between my-10">
-        {/* Image section */}
+        {/* Image section - Right-aligned with hover effects */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="lg:w-5/12 flex justify-center"
+          className="lg:w-5/12 flex justify-center lg:ml-12 mb-8 lg:mb-0 relative group"
         >
           <img
             src={img}
             alt="Laundry Service"
-            className="w-3/4 sm:w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            className="w-3/4 sm:w-full h-auto rounded-lg shadow-xl transition-transform transform group-hover:scale-105 group-hover:rotate-3"
           />
+          {/* Background overlay to enhance the image */}
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-transparent opacity-30 rounded-lg group-hover:opacity-40 transition-opacity"></div>
         </motion.div>
 
         {/* Text content section */}
         <motion.div
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
@@ -44,13 +46,30 @@ const Laundry = () => {
           {/* Laundry Service List with Icons */}
           <div className="mt-8 space-y-6">
             {[
-              ["Quick Wash", <FaTshirt />],
-              ["Eco-Friendly Cleaning", <FaCheckCircle />],
-              ["Pickup & Delivery", <FaTruck />],
-            ].map(([text, icon], index) => (
+              [
+                "Quick Wash",
+                <FaTshirt />,
+                "We provide a fast and efficient wash to get your clothes cleaned and ready to wear in no time. Perfect for those on-the-go.",
+              ],
+              [
+                "Eco-Friendly Cleaning",
+                <FaLeaf />,
+                "Our eco-friendly cleaning process uses biodegradable detergents that are safe for the environment and your clothes.",
+              ],
+              [
+                "Pickup & Delivery",
+                <FaTruck />,
+                "We offer free pickup and delivery, so you don’t have to worry about getting to the laundromat. Convenience at its best.",
+              ],
+              [
+                "Dry Cleaning Services",
+                <FaCheckCircle />,
+                "Our dry cleaning services ensure your delicate clothes are treated with care, leaving them spotless and well-maintained.",
+              ],
+            ].map(([text, icon, description], index) => (
               <motion.div
                 key={index}
-                className="flex items-center space-x-4"
+                className="flex items-start space-x-4"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
@@ -59,12 +78,15 @@ const Laundry = () => {
                 <div className="text-3xl" style={{ color: primaryColor }}>
                   {icon}
                 </div>
-                <span
-                  className="text-lg font-semibold"
-                  style={{ color: primaryColor }}
-                >
-                  {text}
-                </span>
+                <div>
+                  <span
+                    className="text-lg font-semibold block"
+                    style={{ color: primaryColor }}
+                  >
+                    {text}
+                  </span>
+                  <p className="text-gray-600 text-sm mt-2">{description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
