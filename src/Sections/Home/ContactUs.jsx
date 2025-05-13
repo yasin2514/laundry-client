@@ -80,7 +80,7 @@ const ContactUs = () => {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex justify-center items-center gap-2 bg-[#584b80] hover:bg-[#45376a] text-white font-medium py-3 px-5 rounded-full transition duration-300"
+              className="inline-flex justify-center items-center gap-2 bg-[#584b80] hover:bg-[#45376a] text-white font-medium py-3 px-5 rounded-full transition-all duration-300 transform hover:scale-105"
             >
               <FaWhatsapp size={18} />
               Message Us on WhatsApp
