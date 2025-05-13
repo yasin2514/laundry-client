@@ -39,17 +39,17 @@ const About = () => {
       {/* Main About Section */}
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         <motion.div
-          className="relative"
+          className="relative overflow-hidden rounded-2xl shadow-xl"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
         >
           <img
             src={img}
             alt="Laundry Woman"
-            className="rounded-2xl shadow-xl w-full h-auto"
+            className="rounded-2xl w-full h-auto transform transition-transform duration-500 ease-in-out hover:scale-105"
           />
-          <div className="absolute bottom-4 left-4 bg-purple-600 text-white px-5 py-2 rounded-full text-lg font-bold shadow-md">
+          <div className="absolute bottom-4 left-4 bg-purple-600 text-white px-5 py-2 rounded-full text-lg font-bold shadow-md animate-bounce">
             25 years of experience
           </div>
         </motion.div>
@@ -57,7 +57,7 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
         >
           <h4 className="text-purple-600 font-semibold text-md mb-2">
             More than 25 Years of Experience
@@ -73,7 +73,7 @@ const About = () => {
             passionate about making you think differently about laundry!
           </p>
 
-          <ul className="mb-6 space-y-3">
+          <ul className="mb-6 space-y-3 text-lg">
             <li className="flex items-center text-gray-700">
               <FaCheckCircle className="text-purple-600 mr-3 text-lg" /> 100%
               Customer Satisfaction
@@ -92,14 +92,16 @@ const About = () => {
             </li>
           </ul>
 
-          <div className="flex items-center text-purple-700 font-bold text-xl">
+          <div className="flex items-center text-purple-700 font-bold text-lg">
             <FaPhoneAlt className="mr-2" /> 1 (800) 765-43-21
           </div>
         </motion.div>
       </div>
 
-      {/* Auto-Sliding Cards Section */}
-      <AutoSliderCards />
+      {/* Increased gap between sections */}
+      <div className="mt-24">
+        <AutoSliderCards />
+      </div>
     </section>
   );
 };
