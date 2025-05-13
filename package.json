@@ -11,6 +11,7 @@
     "start": "vite"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "daisyui": "^5.0.35",
     "framer-motion": "^12.11.0",
     "localforage": "^1.10.0",
