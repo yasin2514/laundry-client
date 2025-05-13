@@ -10,10 +10,9 @@ import {
 } from "react-icons/fa";
 
 import img1 from "../../assets/delivery.png";
-// Repeat import for other images...
-import img2 from "../../assets/img1.avif";
-import img3 from "../../assets/img1.avif";
-import img4 from "../../assets/img1.avif";
+import img2 from "../../assets/p-1.jpeg";
+import img3 from "../../assets/p-2.jpg";
+import img4 from "../../assets/p-2.jpg";
 import img5 from "../../assets/img1.avif";
 import img6 from "../../assets/img1.avif";
 import img7 from "../../assets/img1.avif";
@@ -93,34 +92,52 @@ const Package = () => {
           <Slider ref={sliderRef} {...settings}>
             {products.map((product) => (
               <div key={product.id} className="px-3 py-5">
-                <div className="shadow-xl border border-gray-200 bg-white rounded-2xl p-5 h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-32 object-cover rounded-xl mb-4"
-                  />
-                  <h4 className="text-xl font-bold mb-4 text-[#584b80]">
-                    {product.name}
-                  </h4>
-                  <ul className="text-sm text-gray-600 text-left space-y-2 mb-6">
-                    {product.description.map((item, index) => (
-                      <li key={index} className="flex items-center gap-2">
-                        <FaCheckCircle className="text-[#584b80]" /> {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <button
-                    onClick={() => handleContactNow(product.name)}
-                    className="bg-[#5a4d8e] text-white py-2 px-6 rounded-xl transition hover:bg-[#4a3c6d] hover:scale-105 flex items-center justify-center"
-                  >
-                    <FaWhatsapp className="mr-2" /> Contact Now
-                  </button>
+                <div className="relative border shadow-md hover:shadow-2xl border-gray-300 overflow-hidden bg-white rounded-2xl h-[360px] group transition-all duration-500 flex flex-col">
+                  {/* Image */}
+                  <div
+                    className="w-full transition-all duration-500 group-hover:h-[120px] mt-3"
+                    style={{
+                      backgroundImage: `url(${product.image})`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                      backgroundSize: "contain", // Ensures the image covers the container
+                      backgroundAttachment: "fixed", // Keeps the image fixed when scrolling
+                      height: "100%", // You can modify this height as per your requirement
+                    }}
+                  ></div>
+
+                  {/* Content Section */}
+                  <div className="flex flex-col justify-between flex-grow px-4 py-4 bg-white relative">
+                    {/* Name */}
+                    <h4 className="text-lg font-bold text-[#584b80] text-center mb-2">
+                      {product.name}
+                    </h4>
+
+                    {/* Details - hidden normally */}
+                    <div className="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[200px] transition-all duration-500 overflow-hidden mb-3">
+                      <ul className="text-sm text-gray-600 text-left space-y-2">
+                        {product.description.map((item, index) => (
+                          <li key={index} className="flex items-center gap-2">
+                            <FaCheckCircle className="text-[#584b80]" /> {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Contact Now Button */}
+                    <button
+                      onClick={() => handleContactNow(product.name)}
+                      className="w-full bg-[#5a4d8e] text-white py-2 px-4 rounded-xl hover:bg-[#4a3c6d] hover:scale-[1.03] transition-all flex items-center justify-center"
+                    >
+                      <FaWhatsapp className="mr-2" /> Contact Now
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
           </Slider>
 
-          {/* Custom Arrows */}
+          {/* Arrows */}
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
             <button
               className="text-2xl text-gray-700 bg-white p-2 rounded-full shadow hover:bg-gray-200"
