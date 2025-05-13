@@ -12,7 +12,7 @@ const Services = () => {
       {" "}
       {/* Changed background color */}
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center text-[#584b80]">
+        <h2 className="text-4xl sm:text-4xl font-extrabold mb-6 text-center text-[#584b80]">
           Our Services
         </h2>
         <p className="text-lg text-center max-w-3xl mx-auto mb-12 text-gray-700">

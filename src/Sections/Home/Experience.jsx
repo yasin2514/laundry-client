@@ -15,7 +15,7 @@ const Experience = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold text-[#584b80] sm:text-4xl mb-4">
+          <h2 className="text-4xl font-extrabold text-[#584b80] sm:text-4xl mb-4">
             Experience the Clock Tower Laundry
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">

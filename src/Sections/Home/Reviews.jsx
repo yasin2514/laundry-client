@@ -45,7 +45,7 @@ const Reviews = () => {
   return (
     <section id="reviews" className="py-16 bg-gray-100 text-gray-800">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-3 text-[#584b80] sm:text-4xl">
+        <h2 className="text-4xl font-extrabold mb-3 text-[#584b80] sm:text-4xl">
           What Our Customers Say
         </h2>
         <p className="max-w-2xl mx-auto text-gray-600 mb-10 sm:text-lg">

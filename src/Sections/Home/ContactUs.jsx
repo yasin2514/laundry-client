@@ -1,14 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaWhatsapp } from "react-icons/fa";
-import img from "../../assets/img1.avif";
+import {
+  FaWhatsapp,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaPhoneAlt,
+} from "react-icons/fa";
+import { HiOutlineSupport } from "react-icons/hi";
+import { MdLocalLaundryService } from "react-icons/md";
 
 const ContactUs = () => {
   const whatsappMessage = `Hello, I would like to inquire about your laundry services.`;
 
   return (
-    <section id="contact-us" className="py-16 bg-white text-gray-800">
-      <div className="max-w-7xl mx-auto px-4">
+    <section id="contact-us" className="py-20 bg-white text-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -16,43 +23,56 @@ const ContactUs = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-[#584b80] mb-4">Contact Us</h2>
+          <h2 className="text-4xl md:text-4xl font-extrabold text-[#584b80] mb-4 tracking-wide">
+            Contact Us
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We’re here to help you with all your laundry needs. Choose the best
-            way to reach us!
+            We’re just a message or visit away. Whether you need quick laundry
+            help, have a custom request, or want to know more, feel free to
+            connect with us.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          {/* Section 1: Image */}
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {/* Card 1 */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-[#f9f9fb] rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col"
+          >
+            <div className="text-4xl text-[#584b80] mb-4">
+              <MdLocalLaundryService />
+            </div>
+            <h3 className="text-xl font-semibold text-[#584b80] mb-2">
+              Why Choose Clock Tower Laundry?
+            </h3>
+            <p className="text-gray-700 text-base flex-grow">
+              Our experienced team uses premium detergents, handles garments
+              with care, and ensures eco-friendly washing. We prioritize
+              quality, punctuality, and customer satisfaction.
+            </p>
+          </motion.div>
+
+          {/* Card 2 */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="rounded-xl overflow-hidden shadow-lg"
+            className="bg-[#f0eefc] rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col text-center"
           >
-            <img
-              src={img}
-              alt="Clock Tower Laundry Location"
-              className="w-full h-72 object-cover"
-            />
-          </motion.div>
-
-          {/* Section 2: Get in Touch */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9 }}
-            viewport={{ once: true }}
-            className="bg-[#f5f5f5] rounded-xl p-8 shadow-md text-center flex flex-col justify-center"
-          >
-            <h3 className="text-2xl font-semibold text-[#584b80] mb-4">
-              Get in Touch
+            <div className="text-4xl text-[#584b80] mb-4 mx-auto">
+              <FaWhatsapp />
+            </div>
+            <h3 className="text-xl font-semibold text-[#584b80] mb-2">
+              Chat with Us Instantly
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
-              Want quick help? Tap the button below to message us directly on
-              WhatsApp.
+            <p className="text-gray-700 mb-6">
+              Need support or want to schedule a pickup? Our team is ready on
+              WhatsApp. Quick, reliable, and always available.
             </p>
             <a
               href={`https://wa.me/8801774647257?text=${encodeURIComponent(
@@ -60,36 +80,66 @@ const ContactUs = () => {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#584b80] hover:bg-[#46396a] text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 shadow"
+              className="inline-flex justify-center items-center gap-2 bg-[#584b80] hover:bg-[#45376a] text-white font-medium py-3 px-5 rounded-full transition duration-300"
             >
-              <FaWhatsapp size={20} />
+              <FaWhatsapp size={18} />
               Message Us on WhatsApp
             </a>
           </motion.div>
 
-          {/* Section 3: Address & Contact */}
+          {/* Card 3 */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-[#e8eaf6] rounded-xl p-8 shadow-md flex flex-col justify-center"
+            className="bg-[#eef2fb] rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col"
           >
-            <h3 className="text-2xl font-semibold text-[#584b80] mb-4">
-              Contact Info
+            <div className="text-4xl text-[#584b80] mb-4">
+              <FaMapMarkerAlt />
+            </div>
+            <h3 className="text-xl font-semibold text-[#584b80] mb-2">
+              Visit Our Store
             </h3>
-            <p className="text-lg text-gray-800 mb-2">
-              <strong>Clock Tower Laundry</strong>
+            <p className="text-gray-700 mb-4">
+              Prefer in-person service? Drop by our laundry store and enjoy
+              premium care with a smile. We're always ready to help.
             </p>
-            <p className="text-gray-700 mb-1">
-              123 Main Street, Dhaka, Bangladesh
-            </p>
-            <p className="text-gray-700 mb-1">
-              Email: info@clocktowerlaundry.com
-            </p>
-            <p className="text-gray-700">Phone: +8801774647257</p>
+            <div className="w-full h-48 rounded-md overflow-hidden border">
+              <iframe
+                title="Clock Tower Laundry Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.8464979242713!2d90.39133857484215!3d23.75395707868095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b90145e4e223%3A0xf9cfd1a3a71b7e0d!2sClock%20Tower!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
           </motion.div>
         </div>
+
+        {/* Contact Info Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="mt-16 bg-[#f8f8fc] rounded-xl shadow-sm p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+        >
+          <div className="flex items-center gap-3 text-gray-700 text-base">
+            <FaPhoneAlt className="text-[#584b80]" />
+            <span>+880 1774 647 257</span>
+          </div>
+          <div className="flex items-center gap-3 text-gray-700 text-base">
+            <FaEnvelope className="text-[#584b80]" />
+            <span>info@clocktowerlaundry.com</span>
+          </div>
+          <div className="flex items-center gap-3 text-gray-700 text-base">
+            <HiOutlineSupport className="text-[#584b80]" />
+            <span>Support Hours: 8am - 10pm (Everyday)</span>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
