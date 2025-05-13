@@ -10,30 +10,29 @@ const AutoSliderCards = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-  const infoCards = [
-    {
-      icon: <FaClock className="text-purple-600 text-4xl mb-3 mx-auto" />,
-      title: "Save Time & Money",
-      desc: "No more wasted time driving to laundromats. We pickup and deliver for free!",
-    },
-    {
-      icon: (
-        <FaMoneyBillAlt className="text-purple-600 text-4xl mb-3 mx-auto" />
-      ),
-      title: "Pay Online in Seconds",
-      desc: "Manage your account and billing online from any device.",
-    },
-    {
-      icon: <FaClock className="text-purple-600 text-4xl mb-3 mx-auto" />,
-      title: "Fast Turnaround",
-      desc: "Get your laundry back fresh and folded within 24 hours.",
-    },
-    {
-      icon: <FaCheckCircle className="text-purple-600 text-4xl mb-3 mx-auto" />,
-      title: "Satisfaction Guarantee",
-      desc: "We make sure every customer is fully satisfied with our service.",
-    },
-  ];
+ const infoCards = [
+  {
+    icon: <FaClock className="text-purple-600 text-4xl mb-3 mx-auto" />,
+    title: "Save Time & Money",
+    desc: "No more wasted time driving to laundromats. We pickup and deliver for free! Our efficient process ensures you save both time and money while enjoying fresh, clean clothes. Let us handle the laundry so you can focus on what matters most.",
+  },
+  {
+    icon: <FaMoneyBillAlt className="text-purple-600 text-4xl mb-3 mx-auto" />,
+    title: "Pay Online in Seconds",
+    desc: "Manage your account and billing online from any device. Our secure payment system makes transactions quick and hassle-free. Schedule, track, and pay — all in just a few taps!",
+  },
+  {
+    icon: <FaClock className="text-purple-600 text-4xl mb-3 mx-auto" />,
+    title: "Fast Turnaround",
+    desc: "Get your laundry back fresh and folded within 24 hours. We work around the clock to meet tight schedules without compromising quality. Perfect for busy individuals, families, and professionals.",
+  },
+  {
+    icon: <FaCheckCircle className="text-purple-600 text-4xl mb-3 mx-auto" />,
+    title: "Satisfaction Guarantee",
+    desc: "We make sure every customer is fully satisfied with our service. If something’s not right, we’ll make it right — it’s that simple. Your comfort and trust are our top priorities.",
+  },
+];
+
 
   return (
     <div className="mt-16 max-w-7xl mx-auto">
@@ -57,7 +56,7 @@ const AutoSliderCards = () => {
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: idx * 0.2 }}
-            className="bg-gradient-to-br from-purple-100 to-white shadow-xl rounded-3xl p-8 text-center border border-purple-200 w-[94%]  h-[170px] mx-auto" // Set width to 47% and height to 200px
+            className="bg-gradient-to-br from-purple-100 to-white shadow-xl rounded-3xl p-8 text-center border border-purple-200 w-[94%]  mx-auto" // Set width to 47% and height to 200px
           >
             {card.icon}
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
