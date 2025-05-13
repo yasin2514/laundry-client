@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
-import b from "../../assets/banner.jpg";
+import b from "../../assets/b-0.jpg";
 
 const Banner = () => {
   const primaryColor = "#4b3f6e";

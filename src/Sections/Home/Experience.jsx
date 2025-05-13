@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
-import deliveryImg from "../../assets/delivery.png"; // Replace with your image path
+import deliveryImg from "../../assets/i-5.webp"; // Replace with your image path
 
 const Experience = () => {
   return (
@@ -28,21 +28,22 @@ const Experience = () => {
         </motion.div>
 
         {/* Flex Section Container */}
-        <div className="flex flex-col lg:flex-row gap-12 items-center justify-between">
-          {/* Section 1: Delivery Image */}
-          <motion.div
-            className="w-full lg:w-1/3 bg-white p-6 rounded-xl shadow-xl min-h-[300px] flex flex-col justify-center transform transition-all duration-500 hover:shadow-2xl hover:bg-[#e8e8e8]"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src={deliveryImg}
-              alt="Laundry Delivery"
-              className="rounded-xl transition-transform transform hover:rotate-3 w-[60%] max-w-[300px] mx-auto hover:opacity-90"
-            />
-          </motion.div>
+        <div className="flex flex-col lg:flex-row gap-12 items-center justify-between ">
+         {/* Section 1: Delivery Image */}
+<motion.div
+  className="w-full lg:w-1/3 rounded-xl shadow-xxl min-h-[300px] border flex justify-center items-center transform transition-all duration-500 hover:shadow-2xl overflow-hidden"
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  <img
+    src={deliveryImg}
+    alt="Laundry Delivery"
+    className="w-full h-full object-cover"
+  />
+</motion.div>
+
 
           {/* Section 2: Why Choose Us */}
           <motion.div

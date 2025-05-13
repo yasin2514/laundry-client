@@ -1,6 +1,6 @@
 import React from "react";
-import img from "../../assets/img1.avif";
-import { FaTshirt, FaCheckCircle, FaTruck, FaLeaf } from "react-icons/fa"; // Added FaLeaf for Eco-Friendly
+import img from "../../assets/i-7.png";
+import { FaTshirt, FaCheckCircle, FaTruck, FaLeaf } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const primaryColor = "#61597a";
@@ -8,31 +8,30 @@ const primaryColor = "#61597a";
 const Laundry = () => {
   return (
     <div className="bg-white w-full py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto text-center lg:flex lg:items-center lg:justify-between my-10">
-        {/* Image section - Right-aligned with hover effects */}
+      <div className="max-w-7xl mx-auto lg:flex lg:items-center lg:justify-between my-10">
+        {/* Image section - Larger image with no bottom margin */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="lg:w-5/12 flex justify-center lg:ml-12 mb-8 lg:mb-0 relative group"
+          className="lg:w-1/2 flex justify-center lg:ml-0 mb-0 relative group overflow-hidden"
         >
           <img
             src={img}
             alt="Laundry Service"
-            className="w-3/4 sm:w-full h-auto rounded-lg shadow-xl transition-transform transform group-hover:scale-105 group-hover:rotate-3"
+            className="w-full h-auto  transition-transform transform group-hover:scale-105 group-hover:rotate-3 max-w-[600px]"
           />
-          {/* Background overlay to enhance the image */}
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-transparent opacity-30 rounded-lg group-hover:opacity-40 transition-opacity"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-300 to-transparent opacity-30 rounded-lg group-hover:opacity-40 transition-opacity"></div>
         </motion.div>
 
-        {/* Text content section */}
+        {/* Text content section - No margin-top */}
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-8 lg:mt-0 lg:w-1/2 lg:pl-12 text-left"
+          className="lg:w-1/2 lg:pl-12 text-left mt-0"
         >
           <h2 className="text-4xl mb-10 font-extrabold text-[#584b80] sm:text-4xl sm:leading-10">
             We Make Laundry Easy
@@ -43,7 +42,6 @@ const Laundry = () => {
             service, we've got you covered.
           </p>
 
-          {/* Laundry Service List with Icons */}
           <div className="mt-8 space-y-6">
             {[
               [
