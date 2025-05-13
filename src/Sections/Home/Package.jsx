@@ -21,7 +21,7 @@ import img14 from "../../assets/delivery.png";
 import img15 from "../../assets/delivery.png";
 import img16 from "../../assets/delivery.png";
 
-const Service = () => {
+const Package = () => {
   const sliderRef = useRef(null);
   const [expandedDescription, setExpandedDescription] = useState(null);
 
@@ -168,7 +168,7 @@ const Service = () => {
     <section id="service" className="py-16 bg-white text-gray-800">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <h2 className="text-3xl mb-10 font-extrabold text-[#584b80] sm:text-4xl">
-          Our Laundry Services
+          Our Laundry Packages
         </h2>
         <p className="mb-8 text-lg text-gray-700 mx-auto max-w-2xl">
           We offer a wide variety of laundry services to suit your needs, from
@@ -241,4 +241,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default Package;

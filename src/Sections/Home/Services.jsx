@@ -6,14 +6,14 @@ import {
   FaDollarSign,
 } from "react-icons/fa"; // Import icons
 
-const AboutUs = () => {
+const Services = () => {
   return (
     <section id="about-us" className="py-16 bg-[#ecf2ff] text-gray-800">
       {" "}
       {/* Changed background color */}
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center text-[#584b80]">
-          About Us
+          Our Services
         </h2>
         <p className="text-lg text-center max-w-3xl mx-auto mb-12 text-gray-700">
           We are a modern laundry service that combines convenience, speed, and
@@ -76,4 +76,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default Services;
