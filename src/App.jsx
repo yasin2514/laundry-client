@@ -16,9 +16,9 @@ const App = () => {
       <Banner />
       <About/>
       <Services />
-      <Laundry />
-      <Experience />
       <Package />
+      <Experience />
+      <Laundry />
       <Reviews />
       <ContactUs />
       <Footer />

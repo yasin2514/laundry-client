@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import img from "../../assets/img1.avif";
+import img from "../../assets/i-1.jpg";
 import {
   FaCheckCircle,
   FaPhoneAlt,
