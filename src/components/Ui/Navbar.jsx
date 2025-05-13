@@ -20,7 +20,7 @@ const Navbar = () => {
 
         {/* Desktop Nav Links */}
         <div className="hidden lg:flex gap-8 justify-center flex-1">
-          {["Home", "about-us", "service", "contact-us"].map((section) => (
+          {["home", "services", "packages", "contact-us"].map((section) => (
             <Link
               key={section}
               to={section}
@@ -62,7 +62,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="lg:hidden bg-[#4b3f6e] text-white px-6 pb-4 space-y-4">
-          {["Home", "about-us", "service", "contact-us"].map((section) => (
+          {["home", "services", "packages", "contact-us"].map((section) => (
             <Link
               key={section}
               to={section}

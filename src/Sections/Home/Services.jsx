@@ -8,7 +8,7 @@ import {
 
 const Services = () => {
   return (
-    <section id="about-us" className="py-16 bg-[#ecf2ff] text-gray-800">
+    <section id="services" className="py-16 bg-[#ecf2ff] text-gray-800">
       {" "}
       {/* Changed background color */}
       <div className="max-w-7xl mx-auto">

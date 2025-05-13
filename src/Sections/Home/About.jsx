@@ -62,7 +62,7 @@ const About = () => {
           <h4 className="text-purple-600 font-semibold text-md mb-2">
             More than 25 Years of Experience
           </h4>
-          <h2 className="text-4xl font-bold mb-5 text-gray-800 leading-tight">
+          <h2 className="text-4xl font-bold mb-5 text-[#584b80] leading-tight">
             We are Passionate About Laundry
           </h2>
           <p className="text-gray-700 mb-6 text-lg">

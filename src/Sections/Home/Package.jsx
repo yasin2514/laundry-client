@@ -165,7 +165,7 @@ const Package = () => {
   };
 
   return (
-    <section id="service" className="py-16 bg-white text-gray-800">
+    <section id="packages" className="py-16 bg-white text-gray-800">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <h2 className="text-3xl mb-10 font-extrabold text-[#584b80] sm:text-4xl">
           Our Laundry Packages

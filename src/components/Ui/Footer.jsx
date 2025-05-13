@@ -36,7 +36,7 @@ const Footer = () => {
           <div className="text-center lg:text-left">
             <h4 className="text-lg font-semibold mb-4">Quick Shortcuts</h4>
             <ul className="space-y-2 text-sm text-gray-200">
-              {["Home", "About Us", "Services", "Reviews", "Contact Us"].map(
+              {["Home", "Packages", "Services", "Reviews", "Contact Us"].map(
                 (item, idx) => (
                   <li key={idx}>
                     <a
