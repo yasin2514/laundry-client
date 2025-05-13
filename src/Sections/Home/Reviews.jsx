@@ -4,26 +4,26 @@ import { motion } from "framer-motion";
 const reviewsData = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Sara Johnson", // English name with Arabic style
     image: "https://randomuser.me/api/portraits/women/44.jpg",
     feedback:
-      "Laundry service was fast and reliable. Clothes came back fresh and neatly folded!",
+      "Laundry service was fast and reliable. Clothes came back fresh and neatly folded! My experience was excellent, and I will definitely come back again.",
     rating: 5,
   },
   {
     id: 2,
-    name: "Michael Smith",
+    name: "Michael Smith", // English name with Arabic style
     image: "https://randomuser.me/api/portraits/men/32.jpg",
     feedback:
-      "Highly impressed with the service quality. The urgent laundry was delivered on time!",
+      "I was very impressed with the quality of service. The urgent laundry was delivered on time! The service was top-notch, and I highly recommend it.",
     rating: 4,
   },
   {
     id: 3,
-    name: "Fatima Noor",
+    name: "Fatima Noor", // English name with Arabic style
     image: "https://randomuser.me/api/portraits/women/68.jpg",
     feedback:
-      "Very professional and affordable. My abaya was cleaned with great care!",
+      "Very professional and affordable. My abaya was cleaned with great care! I can't wait to use the service again.",
     rating: 5,
   },
 ];
@@ -45,10 +45,10 @@ const Reviews = () => {
   return (
     <section id="reviews" className="py-16 bg-gray-100 text-gray-800">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-3 text-[#584b80]">
+        <h2 className="text-3xl font-bold mb-3 text-[#584b80] sm:text-4xl">
           What Our Customers Say
         </h2>
-        <p className="max-w-2xl mx-auto text-gray-600 mb-10">
+        <p className="max-w-2xl mx-auto text-gray-600 mb-10 sm:text-lg">
           We take pride in delivering quality laundry service to our customers.
           See what they have to say about their experience with us. Their
           satisfaction is our motivation.
@@ -63,7 +63,7 @@ const Reviews = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               variants={cardVariants}
-              className="group bg-white p-6 rounded-xl shadow transition-all duration-300 hover:shadow-2xl hover:scale-[1.03]"
+              className="group bg-white p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.05] transform hover:translate-y-2"
             >
               <div className="flex justify-center mb-4">
                 <img
@@ -78,7 +78,9 @@ const Reviews = () => {
               >
                 <FaQuoteLeft className="text-[#584b80] text-2xl mb-4" />
               </motion.div>
-              <p className="mb-4 text-sm text-gray-700">{review.feedback}</p>
+              <p className="mb-4 text-sm text-gray-700 sm:text-base">
+                {review.feedback}
+              </p>
               <div className="flex justify-center mb-2 text-yellow-500">
                 {[...Array(review.rating)].map((_, i) => (
                   <FaStar key={i} />
