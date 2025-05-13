@@ -49,7 +49,7 @@ const About = () => {
             alt="Laundry Woman"
             className="rounded-2xl w-full h-auto transform transition-transform duration-500 ease-in-out hover:scale-105"
           />
-          <div className="absolute bottom-4 left-4 bg-purple-600 text-white px-5 py-2 rounded-full text-lg font-bold shadow-md animate-bounce">
+          <div className="absolute bottom-5 left-5 bg-purple-600 text-white px-5 py-2 rounded-full text-lg font-bold shadow-md animate-bounce">
             25 years of experience
           </div>
         </motion.div>

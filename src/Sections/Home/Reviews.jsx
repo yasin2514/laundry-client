@@ -2,6 +2,12 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import img1 from "../../assets/u-1.jpeg";
+import img2 from "../../assets/u-2.jpeg";
+import img3 from "../../assets/u-3.webp";
+import img4 from "../../assets/u-4.jpg";
+import img5 from "../../assets/u-5.jpg";
+import img6 from "../../assets/u-6.jpg";
 import {
   FaChevronLeft,
   FaChevronRight,
@@ -13,7 +19,7 @@ const reviewsData = [
   {
     id: 1,
     name: "Ashlam Khan",
-    image: "https://randomuser.me/api/portraits/men/45.jpg",
+    image: img1,
     feedback:
       "Laundry service was fast and reliable. Clothes came back fresh and neatly folded! My experience was excellent, and I will definitely come back again.",
     rating: 5,
@@ -21,7 +27,7 @@ const reviewsData = [
   {
     id: 2,
     name: "Sheik Khadem",
-    image: "https://randomuser.me/api/portraits/men/76.jpg",
+    image: img2,
     feedback:
       "I was very impressed with the quality of service. The urgent laundry was delivered on time! The service was top-notch, and I highly recommend it.",
     rating: 4,
@@ -29,7 +35,7 @@ const reviewsData = [
   {
     id: 3,
     name: "Al Ahli Hashem",
-    image: "https://randomuser.me/api/portraits/men/52.jpg",
+    image: img3,
     feedback:
       "Very professional and affordable. My abaya was cleaned with great care! I can't wait to use the service again. Highly satisfied!",
     rating: 5,
@@ -37,7 +43,7 @@ const reviewsData = [
   {
     id: 4,
     name: "Amir Hossain",
-    image: "https://randomuser.me/api/portraits/men/54.jpg",
+    image: img4,
     feedback:
       "Fantastic service! The laundry was perfect, and the delivery was right on time. I'll definitely use them again.",
     rating: 4,
@@ -45,7 +51,7 @@ const reviewsData = [
   {
     id: 5,
     name: "Rafique Alam",
-    image: "https://randomuser.me/api/portraits/men/78.jpg",
+    image: img5,
     feedback:
       "Excellent experience, very quick and affordable. My clothes were returned as good as new!",
     rating: 5,
@@ -53,7 +59,7 @@ const reviewsData = [
   {
     id: 6,
     name: "Samiul Karim",
-    image: "https://randomuser.me/api/portraits/men/60.jpg",
+    image: img6,
     feedback:
       "Superb quality of laundry service, and I loved the packaging! Highly recommended!",
     rating: 5,

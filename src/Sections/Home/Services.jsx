@@ -36,7 +36,7 @@ const Services = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-between">
           {/* Wash & Fold */}
           <motion.div
-            className="bg-white p-6 rounded-xl shadow-md text-center transform transition-all hover:scale-105 hover:shadow-lg"
+            className="bg-white p-6 rounded-xl shadow-md text-center transform transition-all hover:scale-105 hover:shadow-2xl"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -53,7 +53,7 @@ const Services = () => {
 
           {/* Dry Cleaning */}
           <motion.div
-            className="bg-white p-6 rounded-xl shadow-md text-center transform transition-all hover:scale-105 hover:shadow-lg"
+            className="bg-white p-6 rounded-xl shadow-md text-center transform transition-all hover:scale-105 hover:shadow-2xl"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -70,7 +70,7 @@ const Services = () => {
 
           {/* Eco-Friendly Laundry */}
           <motion.div
-            className="bg-white p-6 rounded-xl shadow-md text-center transform transition-all hover:scale-105 hover:shadow-lg"
+            className="bg-white p-6 rounded-xl shadow-md text-center transform transition-all hover:scale-105 hover:shadow-2xl"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -87,7 +87,7 @@ const Services = () => {
 
           {/* Affordable Prices */}
           <motion.div
-            className="bg-white p-6 rounded-xl shadow-md text-center transform transition-all hover:scale-105 hover:shadow-lg"
+            className="bg-white p-6 rounded-xl shadow-md text-center transform transition-all hover:scale-105 hover:shadow-2xl"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
