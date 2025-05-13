@@ -12,7 +12,7 @@ const Experience = () => {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-extrabold text-[#584b80] sm:text-4xl mb-4">
@@ -31,7 +31,7 @@ const Experience = () => {
         <div className="flex flex-col lg:flex-row gap-12 items-center justify-between">
           {/* Section 1: Delivery Image */}
           <motion.div
-            className="w-full lg:w-1/3 bg-white p-6 rounded-xl shadow-md min-h-[300px] flex flex-col justify-center"
+            className="w-full lg:w-1/3 bg-white p-6 rounded-xl shadow-xl min-h-[300px] flex flex-col justify-center transform transition-all duration-500 hover:shadow-2xl hover:bg-[#e8e8e8]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -40,22 +40,22 @@ const Experience = () => {
             <img
               src={deliveryImg}
               alt="Laundry Delivery"
-              className="rounded-xl transition-transform transform hover:scale-105 w-[50%]  max-w-[300px] mx-auto"
+              className="rounded-xl transition-transform transform hover:rotate-3 w-[60%] max-w-[300px] mx-auto hover:opacity-90"
             />
           </motion.div>
 
           {/* Section 2: Why Choose Us */}
           <motion.div
-            className="w-full lg:w-1/3 bg-white p-6 rounded-xl shadow-md min-h-[300px] flex flex-col justify-center text-center lg:text-left"
+            className="w-full lg:w-1/3 bg-white p-6 rounded-xl shadow-xl min-h-[300px] flex flex-col justify-center text-center lg:text-left transform transition-all duration-500 hover:shadow-2xl hover:bg-[#e8e8e8]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-[#584b80] mb-3">
+            <h3 className="text-2xl font-bold text-[#584b80] mb-3 transform transition-all duration-300 hover:text-[#46396a]">
               Why Choose Our Laundry Service in Saudi Arabia?
             </h3>
-            <p className="text-md text-gray-700 leading-relaxed">
+            <p className="text-md text-gray-700 leading-relaxed transform transition-all duration-300 hover:text-[#46396a]">
               <strong>Fast & Reliable Service</strong>
               <br />
               Our fast and reliable service ensures that your clothes are
@@ -66,30 +66,32 @@ const Experience = () => {
 
           {/* Section 3: Call Now & Email */}
           <motion.div
-            className="w-full lg:w-1/3 bg-white p-6 rounded-xl shadow-md min-h-[300px] flex flex-col justify-center text-center lg:text-center"
+            className="w-full lg:w-1/3 bg-white p-6 rounded-xl shadow-xl min-h-[300px] flex flex-col justify-center text-center lg:text-center transform transition-all duration-500 hover:shadow-2xl hover:bg-[#e8e8e8]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-[#584b80] mb-4">Call Now</h3>
+            <h3 className="text-2xl font-bold text-[#584b80] mb-4 transform transition-all duration-300 hover:text-[#46396a]">
+              Call Now
+            </h3>
             <a
               href="https://wa.me/966XXXXXXXXX"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 bg-[#584b80] text-white rounded-full text-lg font-semibold hover:bg-[#46396a] transition "
+              className="inline-flex items-center justify-center px-6 py-3 bg-[#584b80] text-white rounded-full text-lg font-semibold hover:bg-[#46396a] transition-all duration-300 transform hover:scale-105"
             >
               <FaWhatsapp className="mr-2 text-2xl" />
               Chat on WhatsApp
             </a>
-            <p className="mt-6 text-gray-800 text-md">
+            <p className="mt-6 text-gray-800 text-md transform transition-all duration-300 hover:text-[#46396a]">
               OR
               <br />
               Mail Us Anytime:
               <br />
               <a
                 href="mailto:info@freshmakkahlaundry.com"
-                className="text-[#584b80]  font-semibold"
+                className="text-[#584b80] font-semibold hover:text-[#46396a]"
               >
                 info@freshmakkahlaundry.com
               </a>
