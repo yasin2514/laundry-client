@@ -7,6 +7,7 @@ import Laundry from "./Sections/Home/Laundry";
 import Experience from "./Sections/Home/Experience";
 import Package from "./Sections/Home/Package";
 import Services from "./Sections/Home/Services";
+import About from "./Sections/Home/About";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Navbar />
       <Banner />
       <Laundry />
+      <About/>
       <Services />
       <Experience />
       <Package />
