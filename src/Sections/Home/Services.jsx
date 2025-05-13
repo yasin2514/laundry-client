@@ -42,7 +42,7 @@ const Services = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <FaTshirt className="text-4xl text-[#584b80] mb-4 mx-auto transition-transform duration-300 hover:text-[#45376a]" />
-            <h3 className="text-xl font-semibold text-[#584b80] mb-3 transition-colors duration-300 hover:text-[#45376a]">
+            <h3 className="text-xl font-bold text-[#584b80] mb-3 transition-colors duration-300 hover:text-[#45376a]">
               Wash & Fold
             </h3>
             <p className="text-gray-700">
@@ -59,7 +59,7 @@ const Services = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             <FaRegCheckCircle className="text-4xl text-[#584b80] mb-4 mx-auto transition-transform duration-300 hover:text-[#45376a]" />
-            <h3 className="text-xl font-semibold text-[#584b80] mb-3 transition-colors duration-300 hover:text-[#45376a]">
+            <h3 className="text-xl font-bold text-[#584b80] mb-3 transition-colors duration-300 hover:text-[#45376a]">
               Dry Cleaning
             </h3>
             <p className="text-gray-700">
@@ -76,7 +76,7 @@ const Services = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
           >
             <FaRecycle className="text-4xl text-[#584b80] mb-4 mx-auto transition-transform duration-300 hover:text-[#45376a]" />
-            <h3 className="text-xl font-semibold text-[#584b80] mb-3 transition-colors duration-300 hover:text-[#45376a]">
+            <h3 className="text-xl font-bold text-[#584b80] mb-3 transition-colors duration-300 hover:text-[#45376a]">
               Eco-Friendly Laundry
             </h3>
             <p className="text-gray-700">
@@ -93,7 +93,7 @@ const Services = () => {
             transition={{ duration: 0.6, delay: 0.7 }}
           >
             <FaDollarSign className="text-4xl text-[#584b80] mb-4 mx-auto transition-transform duration-300 hover:text-[#45376a]" />
-            <h3 className="text-xl font-semibold text-[#584b80] mb-3 transition-colors duration-300 hover:text-[#45376a]">
+            <h3 className="text-xl font-bold text-[#584b80] mb-3 transition-colors duration-300 hover:text-[#45376a]">
               Affordable Prices
             </h3>
             <p className="text-gray-700">
