@@ -13,7 +13,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <motion.h2
-          className="text-4xl sm:text-4xl font-extrabold mb-6 text-center text-[#584b80]"
+          className="text-4xl sm:text-4xl font-extrabold mb-6 text-center text-[#6a5097]"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -41,8 +41,8 @@ const Services = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <FaTshirt className="text-4xl text-[#584b80] mb-4 mx-auto transition-transform duration-300 hover:text-[#45376a]" />
-            <h3 className="text-xl font-bold text-[#584b80] mb-3 transition-colors duration-300 hover:text-[#45376a]">
+            <FaTshirt className="text-4xl text-[#6a5097] mb-4 mx-auto transition-transform duration-300 hover:text-[#45376a]" />
+            <h3 className="text-xl font-bold text-[#6a5097] mb-3 transition-colors duration-300 hover:text-[#45376a]">
               Wash & Fold
             </h3>
             <p className="text-gray-700">
@@ -58,8 +58,8 @@ const Services = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <FaRegCheckCircle className="text-4xl text-[#584b80] mb-4 mx-auto transition-transform duration-300 hover:text-[#45376a]" />
-            <h3 className="text-xl font-bold text-[#584b80] mb-3 transition-colors duration-300 hover:text-[#45376a]">
+            <FaRegCheckCircle className="text-4xl text-[#6a5097] mb-4 mx-auto transition-transform duration-300 hover:text-[#45376a]" />
+            <h3 className="text-xl font-bold text-[#6a5097] mb-3 transition-colors duration-300 hover:text-[#45376a]">
               Dry Cleaning
             </h3>
             <p className="text-gray-700">
@@ -75,8 +75,8 @@ const Services = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <FaRecycle className="text-4xl text-[#584b80] mb-4 mx-auto transition-transform duration-300 hover:text-[#45376a]" />
-            <h3 className="text-xl font-bold text-[#584b80] mb-3 transition-colors duration-300 hover:text-[#45376a]">
+            <FaRecycle className="text-4xl text-[#6a5097] mb-4 mx-auto transition-transform duration-300 hover:text-[#45376a]" />
+            <h3 className="text-xl font-bold text-[#6a5097] mb-3 transition-colors duration-300 hover:text-[#45376a]">
               Eco-Friendly Laundry
             </h3>
             <p className="text-gray-700">
@@ -92,8 +92,8 @@ const Services = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
           >
-            <FaDollarSign className="text-4xl text-[#584b80] mb-4 mx-auto transition-transform duration-300 hover:text-[#45376a]" />
-            <h3 className="text-xl font-bold text-[#584b80] mb-3 transition-colors duration-300 hover:text-[#45376a]">
+            <FaDollarSign className="text-4xl text-[#6a5097] mb-4 mx-auto transition-transform duration-300 hover:text-[#45376a]" />
+            <h3 className="text-xl font-bold text-[#6a5097] mb-3 transition-colors duration-300 hover:text-[#45376a]">
               Affordable Prices
             </h3>
             <p className="text-gray-700">

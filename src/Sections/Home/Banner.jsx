@@ -71,7 +71,7 @@ const Banner = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 1.5 }}
-            className="inline-flex justify-center items-center gap-2 bg-[#584b80] hover:bg-[#45376a] text-white font-medium py-3 px-5 rounded-full transition-all duration-300 transform hover:scale-105"
+            className="inline-flex justify-center items-center gap-2 bg-[#6a5097] hover:bg-[#584b80] text-white font-medium py-3 px-5 rounded-full transition-all duration-300 transform hover:scale-105"
           >
             <FaWhatsapp size={18} />
             Message Us on WhatsApp

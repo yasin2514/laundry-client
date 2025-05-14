@@ -12,22 +12,22 @@ const AutoSliderCards = () => {
 
  const infoCards = [
   {
-    icon: <FaClock className="text-purple-600 text-4xl mb-3 mx-auto" />,
+    icon: <FaClock className="text-[#6a5097] text-4xl mb-3 mx-auto" />,
     title: "Save Time & Money",
     desc: "No more wasted time driving to laundromats. We pickup and deliver for free! Our efficient process ensures you save both time and money while enjoying fresh, clean clothes. Let us handle the laundry so you can focus on what matters most.",
   },
   {
-    icon: <FaMoneyBillAlt className="text-purple-600 text-4xl mb-3 mx-auto" />,
+    icon: <FaMoneyBillAlt className="text-[#6a5097] text-4xl mb-3 mx-auto" />,
     title: "Pay Online in Seconds",
     desc: "Manage your account and billing online from any device. Our secure payment system makes transactions quick and hassle-free. Schedule, track, and pay — all in just a few taps!",
   },
   {
-    icon: <FaClock className="text-purple-600 text-4xl mb-3 mx-auto" />,
+    icon: <FaClock className="text-[#6a5097] text-4xl mb-3 mx-auto" />,
     title: "Fast Turnaround",
     desc: "Get your laundry back fresh and folded within 24 hours. We work around the clock to meet tight schedules without compromising quality. Perfect for busy individuals, families, and professionals.",
   },
   {
-    icon: <FaCheckCircle className="text-purple-600 text-4xl mb-3 mx-auto" />,
+    icon: <FaCheckCircle className="text-[#6a5097] text-4xl mb-3 mx-auto" />,
     title: "Satisfaction Guarantee",
     desc: "We make sure every customer is fully satisfied with our service. If something’s not right, we’ll make it right — it’s that simple. Your comfort and trust are our top priorities.",
   },

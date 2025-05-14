@@ -84,7 +84,7 @@ const Reviews = () => {
   return (
     <section id="reviews" className="py-16 bg-gray-100 text-gray-800">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <h2 className="text-4xl mb-10 font-extrabold text-[#584b80] sm:text-4xl">
+        <h2 className="text-4xl mb-10 font-extrabold text-[#6a5097] sm:text-4xl">
           What Our Customers Say
         </h2>
         <p className="mb-12 text-lg text-gray-700 mx-auto max-w-2xl">
@@ -109,7 +109,7 @@ const Reviews = () => {
 
                   {/* Content */}
                   <div className="flex flex-col justify-between flex-grow">
-                    <FaQuoteLeft className="text-[#584b80] text-2xl mb-4" />
+                    <FaQuoteLeft className="text-[#6a5097] text-2xl mb-4" />
                     <p className="mb-5 text-gray-700 text-sm sm:text-base leading-relaxed">
                       {review.feedback}
                     </p>
@@ -118,7 +118,7 @@ const Reviews = () => {
                         <FaStar key={i} />
                       ))}
                     </div>
-                    <p className="text-base font-semibold text-[#584b80]">
+                    <p className="text-base font-semibold text-[#6a5097]">
                       - {review.name}
                     </p>
                   </div>

@@ -15,7 +15,7 @@ const Experience = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-extrabold text-[#584b80] sm:text-4xl mb-4">
+          <h2 className="text-4xl font-extrabold text-[#6a5097] sm:text-4xl mb-4">
             Experience the Clock Tower Laundry
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
@@ -29,21 +29,20 @@ const Experience = () => {
 
         {/* Flex Section Container */}
         <div className="flex flex-col lg:flex-row gap-12 items-center justify-between ">
-         {/* Section 1: Delivery Image */}
-<motion.div
-  className="w-full lg:w-1/3 rounded-xl shadow-xxl min-h-[300px] border flex justify-center items-center transform transition-all duration-500 hover:shadow-2xl overflow-hidden"
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  viewport={{ once: true }}
->
-  <img
-    src={deliveryImg}
-    alt="Laundry Delivery"
-    className="w-full h-full object-cover"
-  />
-</motion.div>
-
+          {/* Section 1: Delivery Image */}
+          <motion.div
+            className="w-full lg:w-1/3 rounded-xl shadow-xxl min-h-[300px] border flex justify-center items-center transform transition-all duration-500 hover:shadow-2xl overflow-hidden"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <img
+              src={deliveryImg}
+              alt="Laundry Delivery"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
 
           {/* Section 2: Why Choose Us */}
           <motion.div
@@ -53,7 +52,7 @@ const Experience = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-[#584b80] mb-3 transform transition-all duration-300 hover:text-[#46396a]">
+            <h3 className="text-2xl font-bold text-[#6a5097] mb-3 transform transition-all duration-300 hover:text-[#46396a]">
               Why Choose Our Laundry Service in Saudi Arabia?
             </h3>
             <p className="text-md text-gray-700 leading-relaxed transform transition-all duration-300 hover:text-[#46396a]">
@@ -73,14 +72,14 @@ const Experience = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-[#584b80] mb-4 transform transition-all duration-300 hover:text-[#46396a]">
+            <h3 className="text-2xl font-bold text-[#6a5097] mb-4 transform transition-all duration-300 hover:text-[#46396a]">
               Call Now
             </h3>
             <a
               href="https://wa.me/966XXXXXXXXX"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 bg-[#584b80] text-white rounded-full text-lg font-semibold hover:bg-[#46396a] transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center justify-center px-6 py-3 bg-[#6a5097] text-white rounded-full text-lg font-semibold hover:bg-[#584b80] transition-all duration-300 transform hover:scale-105"
             >
               <FaWhatsapp className="mr-2 text-2xl" />
               Chat on WhatsApp
@@ -92,7 +91,7 @@ const Experience = () => {
               <br />
               <a
                 href="mailto:info@freshmakkahlaundry.com"
-                className="text-[#584b80] font-semibold hover:text-[#46396a]"
+                className="text-[#6a5097] font-semibold hover:text-[#46396a]"
               >
                 info@freshmakkahlaundry.com
               </a>

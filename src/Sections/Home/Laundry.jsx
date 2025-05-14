@@ -3,7 +3,7 @@ import img from "../../assets/i-7.png";
 import { FaTshirt, FaCheckCircle, FaTruck, FaLeaf } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const primaryColor = "#61597a";
+const primaryColor = "#6a5097";
 
 const Laundry = () => {
   return (
@@ -33,7 +33,7 @@ const Laundry = () => {
           viewport={{ once: true }}
           className="lg:w-1/2 lg:pl-12 text-left mt-0"
         >
-          <h2 className="text-4xl mb-10 font-extrabold text-[#584b80] sm:text-4xl sm:leading-10">
+          <h2 className="text-4xl mb-10 font-extrabold text-[#6a5097] sm:text-4xl sm:leading-10">
             We Make Laundry Easy
           </h2>
           <p className="mt-6 max-w-2xl text-xl text-gray-800 sm:mt-4">

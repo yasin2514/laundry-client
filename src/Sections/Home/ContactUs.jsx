@@ -23,7 +23,7 @@ const ContactUs = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-4xl font-extrabold text-[#584b80] mb-4 tracking-wide">
+          <h2 className="text-4xl md:text-4xl font-extrabold text-[#6a5097] mb-4 tracking-wide">
             Contact Us
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -43,10 +43,10 @@ const ContactUs = () => {
             viewport={{ once: true }}
             className="bg-[#f9f9fb] rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col"
           >
-            <div className="text-4xl text-[#584b80] mb-4">
+            <div className="text-4xl text-[#6a5097] mb-4">
               <MdLocalLaundryService />
             </div>
-            <h3 className="text-xl font-semibold text-[#584b80] mb-2">
+            <h3 className="text-xl font-semibold text-[#6a5097] mb-2">
               Why Choose Clock Tower Laundry?
             </h3>
             <p className="text-gray-700 text-base flex-grow">
@@ -64,10 +64,10 @@ const ContactUs = () => {
             viewport={{ once: true }}
             className="bg-[#f0eefc] rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col text-center"
           >
-            <div className="text-4xl text-[#584b80] mb-4 mx-auto">
+            <div className="text-4xl text-[#6a5097] mb-4 mx-auto">
               <FaWhatsapp />
             </div>
-            <h3 className="text-xl font-semibold text-[#584b80] mb-2">
+            <h3 className="text-xl font-semibold text-[#6a5097] mb-2">
               Chat with Us Instantly
             </h3>
             <p className="text-gray-700 mb-6">
@@ -80,7 +80,7 @@ const ContactUs = () => {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex justify-center items-center gap-2 bg-[#584b80] hover:bg-[#45376a] text-white font-medium py-3 px-5 rounded-full transition-all duration-300 transform hover:scale-105"
+              className="inline-flex justify-center items-center gap-2 bg-[#6a5097] hover:bg-[#584b80] text-white font-medium py-3 px-5 rounded-full transition-all duration-300 transform hover:scale-105"
             >
               <FaWhatsapp size={18} />
               Message Us on WhatsApp
@@ -95,10 +95,10 @@ const ContactUs = () => {
             viewport={{ once: true }}
             className="bg-[#eef2fb] rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col"
           >
-            <div className="text-4xl text-[#584b80] mb-4">
+            <div className="text-4xl text-[#6a5097] mb-4">
               <FaMapMarkerAlt />
             </div>
-            <h3 className="text-xl font-semibold text-[#584b80] mb-2">
+            <h3 className="text-xl font-semibold text-[#6a5097] mb-2">
               Visit Our Store
             </h3>
             <p className="text-gray-700 mb-4">
@@ -128,15 +128,15 @@ const ContactUs = () => {
           className="mt-16 bg-[#f8f8fc] rounded-xl shadow-sm p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
         >
           <div className="flex items-center gap-3 text-gray-700 text-base">
-            <FaPhoneAlt className="text-[#584b80]" />
+            <FaPhoneAlt className="text-[#6a5097]" />
             <span>+880 1774 647 257</span>
           </div>
           <div className="flex items-center gap-3 text-gray-700 text-base">
-            <FaEnvelope className="text-[#584b80]" />
+            <FaEnvelope className="text-[#6a5097]" />
             <span>info@clocktowerlaundry.com</span>
           </div>
           <div className="flex items-center gap-3 text-gray-700 text-base">
-            <HiOutlineSupport className="text-[#584b80]" />
+            <HiOutlineSupport className="text-[#6a5097]" />
             <span>Support Hours: 8am - 10pm (Everyday)</span>
           </div>
         </motion.div>

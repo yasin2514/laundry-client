@@ -144,7 +144,7 @@ const Package = () => {
 
       {/* 🔷 Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
-        <h2 className="text-4xl mb-10 font-extrabold text-[#584b80] sm:text-4xl">
+        <h2 className="text-4xl mb-10 font-extrabold text-[#6a5097] sm:text-4xl">
           Our Laundry Packages
         </h2>
         <p className="mb-12 text-lg text-gray-700 mx-auto max-w-2xl">
@@ -173,7 +173,7 @@ const Package = () => {
 
                   {/* 📄 Product Details */}
                   <div className="flex flex-col justify-between flex-grow px-4 py-4 bg-white relative">
-                    <h4 className="text-lg font-bold text-[#584b80] text-center mb-2">
+                    <h4 className="text-lg font-bold text-[#6a5097] text-center mb-2">
                       {product.name}
                     </h4>
 
@@ -182,7 +182,7 @@ const Package = () => {
                       <ul className="text-sm text-gray-600 text-left space-y-2">
                         {product.description.map((item, index) => (
                           <li key={index} className="flex items-center gap-2">
-                            <FaCheckCircle className="text-[#584b80] text-sm" />
+                            <FaCheckCircle className="text-[#6a5097] text-sm" />
                             {item}
                           </li>
                         ))}
@@ -192,7 +192,7 @@ const Package = () => {
                     {/* 📞 Contact Button */}
                     <button
                       onClick={() => handleContactNow(product.name)}
-                      className="mt-auto bg-[#584b80] hover:bg-[#46396a] text-white py-2 px-4 rounded-full text-sm flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105"
+                      className="mt-auto bg-[#6a5097] hover:bg-[#584b80] text-white py-2 px-4 rounded-full text-sm flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105"
                     >
                       <FaWhatsapp className="text-lg" /> Contact Now
                     </button>
