@@ -109,7 +109,7 @@ const Reviews = () => {
 
                   {/* Content */}
                   <div className="flex flex-col justify-between flex-grow">
-                    <FaQuoteLeft className="text-[#a08ed9] text-2xl mb-4" />
+                    <FaQuoteLeft className="text-[#584b80] text-2xl mb-4" />
                     <p className="mb-5 text-gray-700 text-sm sm:text-base leading-relaxed">
                       {review.feedback}
                     </p>

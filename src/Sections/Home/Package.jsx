@@ -8,6 +8,7 @@ import {
   FaWhatsapp,
   FaCheckCircle,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 import img1 from "../../assets/p-1.png";
 import img2 from "../../assets/p-2.png";
@@ -26,6 +27,25 @@ import img14 from "../../assets/p-14.png";
 import img15 from "../../assets/p-15.png";
 import img16 from "../../assets/p-16.png";
 
+// 🔹 Custom Left Arrow
+const PrevArrow = ({ onClick }) => (
+  <div
+    className="absolute -left-6 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer text-purple-600 hover:text-purple-700 transition-all duration-300"
+    onClick={onClick}
+  >
+    <FaChevronLeft className="text-3xl hover:scale-110" />
+  </div>
+);
+
+// 🔹 Custom Right Arrow
+const NextArrow = ({ onClick }) => (
+  <div
+    className="absolute -right-6 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer text-purple-600 hover:text-purple-700 transition-all duration-300"
+    onClick={onClick}
+  >
+    <FaChevronRight className="text-3xl hover:scale-110" />
+  </div>
+);
 
 const Package = () => {
   const sliderRef = useRef(null);
@@ -56,19 +76,40 @@ const Package = () => {
       "Urgent Iron Only",
     ],
   }));
+  const PrevArrow = ({ onClick }) => (
+    <button
+      className="absolute -left-6 top-1/2 transform -translate-y-1/2 bg-[#584b80] hover:bg-[#6a5097] text-white rounded-full p-3 z-20 hover:scale-110 transition-all duration-300 shadow-md"
+      onClick={onClick}
+    >
+      <FaChevronLeft size={18} />
+    </button>
+  );
 
+  const NextArrow = ({ onClick }) => (
+    <button
+      className="absolute -right-6 top-1/2 transform -translate-y-1/2 bg-[#584b80] hover:bg-[#6a5097] text-white rounded-full p-3 z-20 hover:scale-110 transition-all duration-300 shadow-md"
+      onClick={onClick}
+    >
+      <FaChevronRight size={18} />
+    </button>
+  );
+  
+  
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 3 } },
       { breakpoint: 768, settings: { slidesToShow: 2 } },
       { breakpoint: 480, settings: { slidesToShow: 1 } },
     ],
   };
+  
 
   const handleContactNow = (productName) => {
     const wpNumber = "+8801774647257";
@@ -78,8 +119,31 @@ const Package = () => {
   };
 
   return (
-    <section id="packages" className="py-16 bg-white text-gray-800">
-      <div className="max-w-7xl mx-auto px-4 text-center">
+    <section
+      id="packages"
+      className="relative py-20 bg-white text-gray-800 overflow-hidden"
+    >
+      {/* 🔵 Background Animated Shapes */}
+      <motion.div
+        className="absolute top-[-50px] right-[-60px] w-72 h-72 bg-purple-100 rounded-full z-0"
+        animate={{ scale: [1, 1.2, 1] }}
+        transition={{ duration: 6, repeat: Infinity }}
+      ></motion.div>
+
+      <motion.div
+        className="absolute bottom-[100px] left-[-50px] w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply blur-2xl opacity-40 z-0"
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ duration: 8, repeat: Infinity }}
+      ></motion.div>
+
+      <motion.div
+        className="absolute bottom-0 right-[-80px] w-56 h-56 bg-purple-50 rounded-full z-0 hidden md:block"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 5, repeat: Infinity }}
+      ></motion.div>
+
+      {/* 🔷 Main Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
         <h2 className="text-4xl mb-10 font-extrabold text-[#584b80] sm:text-4xl">
           Our Laundry Packages
         </h2>
@@ -94,67 +158,49 @@ const Package = () => {
             {products.map((product) => (
               <div key={product.id} className="px-3 py-5">
                 <div className="relative border shadow-md hover:shadow-2xl border-gray-300 overflow-hidden bg-white rounded-2xl h-[360px] group transition-all duration-500 flex flex-col">
-                  {/* Image */}
+                  {/* 🖼️ Product Image */}
                   <div
                     className="w-full transition-all duration-500 group-hover:h-[120px] mt-3"
                     style={{
                       backgroundImage: `url(${product.image})`,
                       backgroundRepeat: "no-repeat",
                       backgroundPosition: "center",
-                      backgroundSize: "contain", // Ensures the image covers the container
-                      backgroundAttachment: "fixed", // Keeps the image fixed when scrolling
-                      height: "100%", // You can modify this height as per your requirement
+                      backgroundSize: "contain",
+                      backgroundAttachment: "fixed",
+                      height: "100%",
                     }}
                   ></div>
 
-                  {/* Content Section */}
+                  {/* 📄 Product Details */}
                   <div className="flex flex-col justify-between flex-grow px-4 py-4 bg-white relative">
-                    {/* Name */}
                     <h4 className="text-lg font-bold text-[#584b80] text-center mb-2">
                       {product.name}
                     </h4>
 
-                    {/* Details - hidden normally */}
+                    {/* 🔽 Description List */}
                     <div className="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[200px] transition-all duration-500 overflow-hidden mb-3">
                       <ul className="text-sm text-gray-600 text-left space-y-2">
                         {product.description.map((item, index) => (
                           <li key={index} className="flex items-center gap-2">
-                            <FaCheckCircle className="text-[#584b80]" /> {item}
+                            <FaCheckCircle className="text-[#584b80] text-sm" />
+                            {item}
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    {/* Contact Now Button */}
+                    {/* 📞 Contact Button */}
                     <button
                       onClick={() => handleContactNow(product.name)}
-                      className="w-full bg-[#5a4d8e] text-white py-2 px-4 rounded-xl hover:bg-[#4a3c6d] hover:scale-[1.03] transition-all flex items-center justify-center"
+                      className="mt-auto bg-[#584b80] hover:bg-[#46396a] text-white py-2 px-4 rounded-full text-sm flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105"
                     >
-                      <FaWhatsapp className="mr-2" /> Contact Now
+                      <FaWhatsapp className="text-lg" /> Contact Now
                     </button>
                   </div>
                 </div>
               </div>
             ))}
           </Slider>
-
-          {/* Arrows */}
-          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
-            <button
-              className="text-2xl text-gray-700 bg-white p-2 rounded-full shadow hover:bg-gray-200"
-              onClick={() => sliderRef.current.slickPrev()}
-            >
-              <FaChevronLeft />
-            </button>
-          </div>
-          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10">
-            <button
-              className="text-2xl text-gray-700 bg-white p-2 rounded-full shadow hover:bg-gray-200"
-              onClick={() => sliderRef.current.slickNext()}
-            >
-              <FaChevronRight />
-            </button>
-          </div>
         </div>
       </div>
     </section>
