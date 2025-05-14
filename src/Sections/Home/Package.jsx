@@ -121,7 +121,7 @@ const Package = () => {
   return (
     <section
       id="packages"
-      className="relative py-20 bg-white text-gray-800 overflow-hidden"
+      className="relative py-16 bg-white text-gray-800 overflow-hidden"
     >
       {/* 🔵 Background Animated Shapes */}
       <motion.div

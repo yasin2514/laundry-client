@@ -30,7 +30,7 @@ const About = () => {
   }, []);
 
   return (
-    <section className="relative bg-white py-16 px-6 lg:px-16 overflow-hidden">
+    <section className="relative bg-white py-20 px-6 lg:px-16 overflow-hidden">
       {/* Background Shapes */}
       <motion.div
         className="absolute top-[-50px] left-[-60px] w-72 h-72 bg-purple-100 rounded-full z-0"
