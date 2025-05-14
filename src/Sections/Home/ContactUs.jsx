@@ -13,8 +13,31 @@ const ContactUs = () => {
   const whatsappMessage = `Hello, I would like to inquire about your laundry services.`;
 
   return (
-    <section id="contact-us" className="py-20 bg-white text-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="contact-us"
+      className="py-20 bg-white text-gray-800 relative overflow-hidden"
+    >
+      {/* 🔵 Background Animated Shapes */}
+      <motion.div
+        className="absolute top-[-50px] right-[-60px] w-72 h-72 bg-purple-100 rounded-full z-0"
+        animate={{ scale: [1, 1.2, 1] }}
+        transition={{ duration: 6, repeat: Infinity }}
+      ></motion.div>
+
+      <motion.div
+        className="absolute bottom-[100px] left-[-50px] w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply blur-2xl opacity-40 z-0"
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ duration: 8, repeat: Infinity }}
+      ></motion.div>
+
+      <motion.div
+        className="absolute bottom-0 right-[-80px] w-56 h-56 bg-purple-50 rounded-full z-0 hidden md:block"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 5, repeat: Infinity }}
+      ></motion.div>
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}

@@ -7,9 +7,29 @@ const primaryColor = "#6a5097";
 
 const Laundry = () => {
   return (
-    <div className="bg-white w-full py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto lg:flex lg:items-center lg:justify-between my-10">
-        {/* Image section - Larger image with no bottom margin */}
+    <div className="relative bg-white w-full py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Background Shapes */}
+      <motion.div
+        className="absolute top-[-50px] left-[-60px] w-72 h-72 bg-purple-100 rounded-full z-0"
+        animate={{ scale: [1, 1.2, 1] }}
+        transition={{ duration: 6, repeat: Infinity }}
+      ></motion.div>
+
+      <motion.div
+        className="absolute bottom-[200px] right-[-50px] w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply blur-2xl opacity-40 z-0"
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ duration: 8, repeat: Infinity }}
+      ></motion.div>
+
+      <motion.div
+        className="absolute bottom-0 left-[-80px] w-56 h-56 bg-purple-50 rounded-full z-0 hidden md:block"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 5, repeat: Infinity }}
+      ></motion.div>
+
+      {/* Main Content */}
+      <div className="relative max-w-7xl mx-auto lg:flex lg:items-center lg:justify-between my-10 z-10">
+        {/* Image section */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -20,12 +40,12 @@ const Laundry = () => {
           <img
             src={img}
             alt="Laundry Service"
-            className="w-full h-auto  transition-transform transform group-hover:scale-105 group-hover:rotate-3 max-w-[600px]"
+            className="w-full h-auto transition-transform transform group-hover:scale-105 group-hover:rotate-3 max-w-[600px]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-purple-300 to-transparent opacity-30 rounded-lg group-hover:opacity-40 transition-opacity"></div>
         </motion.div>
 
-        {/* Text content section - No margin-top */}
+        {/* Text section */}
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
