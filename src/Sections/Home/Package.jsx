@@ -9,22 +9,23 @@ import {
   FaCheckCircle,
 } from "react-icons/fa";
 
-import img1 from "../../assets/delivery.png";
-import img2 from "../../assets/p-1.jpeg";
-import img3 from "../../assets/p-2.jpg";
-import img4 from "../../assets/p-2.jpg";
-import img5 from "../../assets/img1.avif";
-import img6 from "../../assets/img1.avif";
-import img7 from "../../assets/img1.avif";
-import img8 from "../../assets/img1.avif";
-import img9 from "../../assets/img1.avif";
-import img10 from "../../assets/img1.avif";
-import img11 from "../../assets/img1.avif";
-import img12 from "../../assets/img1.avif";
-import img13 from "../../assets/img1.avif";
-import img14 from "../../assets/img1.avif";
-import img15 from "../../assets/img1.avif";
-import img16 from "../../assets/img1.avif";
+import img1 from "../../assets/p-1.png";
+import img2 from "../../assets/p-2.png";
+import img3 from "../../assets/p-3.png";
+import img4 from "../../assets/p-4.png";
+import img5 from "../../assets/p-5.png";
+import img6 from "../../assets/p-6.png";
+import img7 from "../../assets/p-7.png";
+import img8 from "../../assets/p-8.png";
+import img9 from "../../assets/p-9.png";
+import img10 from "../../assets/p-10.png";
+import img11 from "../../assets/p-11.png";
+import img12 from "../../assets/p-12.png";
+import img13 from "../../assets/p-13.png";
+import img14 from "../../assets/p-14.png";
+import img15 from "../../assets/p-15.png";
+import img16 from "../../assets/p-16.png";
+
 
 const Package = () => {
   const sliderRef = useRef(null);
