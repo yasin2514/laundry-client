@@ -4,7 +4,7 @@ import logo from "../../assets/react.svg"; // Replace with your actual logo path
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-[#0d0314] to-[#1a1f4b] text-white py-12">
+    <footer className="bg-[#352d4d] text-white py-12">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
