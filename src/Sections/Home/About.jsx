@@ -1,11 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import img from "../../assets/i-1.jpg";
-import {
-  FaCheckCircle,
-  FaPhoneAlt,
-  FaMoneyBillAlt,
-  FaClock,
-} from "react-icons/fa";
+import { FaCheckCircle, FaPhoneAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import AutoSliderCards from "../../components/Ui/AutoSliderCards";
 
@@ -35,9 +30,28 @@ const About = () => {
   }, []);
 
   return (
-    <section className="bg-white py-16 px-6 lg:px-16">
-      {/* Main About Section */}
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <section className="relative bg-white py-16 px-6 lg:px-16 overflow-hidden">
+      {/* Background Shapes */}
+      <motion.div
+        className="absolute top-[-50px] left-[-60px] w-72 h-72 bg-purple-100 rounded-full z-0"
+        animate={{ scale: [1, 1.2, 1] }}
+        transition={{ duration: 6, repeat: Infinity }}
+      ></motion.div>
+
+      <motion.div
+        className="absolute bottom-[200px] right-[-50px] w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply blur-2xl opacity-40 z-0"
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ duration: 8, repeat: Infinity }}
+      ></motion.div>
+
+      <motion.div
+        className="absolute top-1/2 left-[-80px] w-56 h-56 bg-purple-50 rounded-full z-0 hidden md:block"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 5, repeat: Infinity }}
+      ></motion.div>
+
+      {/* Main Content */}
+      <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center z-10">
         <motion.div
           className="relative overflow-hidden rounded-2xl shadow-xl"
           initial={{ opacity: 0, x: -50 }}
@@ -99,7 +113,7 @@ const About = () => {
       </div>
 
       {/* Increased gap between sections */}
-      <div className="mt-24">
+      <div className="mt-24 relative z-10">
         <AutoSliderCards />
       </div>
     </section>
