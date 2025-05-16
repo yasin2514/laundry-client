@@ -16,7 +16,7 @@ const Experience = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-extrabold text-[#6a5097] sm:text-4xl mb-4">
-            Experience the Clock Tower Laundry
+            Experience the Laundry King at Clock Tower
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
             We are a professional Clock Tower Laundry. We provide a professional
@@ -76,7 +76,7 @@ const Experience = () => {
               Call Now
             </h3>
             <a
-              href="https://wa.me/966XXXXXXXXX"
+              href="https://wa.me/966557802506"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 bg-[#6a5097] text-white rounded-full text-lg font-semibold hover:bg-[#584b80] transition-all duration-300 transform hover:scale-105"
@@ -90,10 +90,10 @@ const Experience = () => {
               Mail Us Anytime:
               <br />
               <a
-                href="mailto:info@freshmakkahlaundry.com"
+                href="mailto:rifatshikder056@gmail.com"
                 className="text-[#6a5097] font-semibold hover:text-[#46396a]"
               >
-                info@freshmakkahlaundry.com
+                rifatshikder056@gmail.com
               </a>
             </p>
           </motion.div>

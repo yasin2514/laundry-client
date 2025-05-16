@@ -56,7 +56,7 @@ const Laundry = () => {
           <h2 className="text-4xl mb-10 font-extrabold text-[#6a5097] sm:text-4xl sm:leading-10">
             We Make Laundry Easy
           </h2>
-          <p className="mt-6 max-w-2xl text-xl text-gray-800 sm:mt-4">
+          <p className="mt-6 max-w-2xl text-base text-gray-700 flex-grow sm:mt-4">
             Get your laundry done quickly and conveniently. We offer a range of
             services to fit your needs. Whether it's a quick wash or full
             service, we've got you covered.

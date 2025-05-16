@@ -61,7 +61,7 @@ const About = () => {
           <div className="max-h-[450px]">
             <img
               src={img}
-              alt="Laundry Woman"
+              alt="Laundry man"
               className="rounded-2xl w-full h-auto transform transition-transform duration-500 ease-in-out hover:scale-105"
             />
           </div>

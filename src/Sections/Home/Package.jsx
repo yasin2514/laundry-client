@@ -112,11 +112,12 @@ const Package = () => {
   
 
   const handleContactNow = (productName) => {
-    const wpNumber = "+8801774647257";
+    const wpNumber = "966557802506"; // Updated WhatsApp number
     const message = `Hello, I am interested in your ${productName}.`;
     const url = `https://wa.me/${wpNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
+  
 
   return (
     <section

@@ -46,7 +46,7 @@ const Navbar = () => {
           </div>
           <div className="leading-tight">
             <p className="font-semibold text-sm">Call to Schedule!</p>
-            <p className="text-base font-bold">+9099479474747</p>
+            <p className="text-base font-bold">+966557802506</p>
           </div>
         </div>
 
@@ -88,7 +88,7 @@ const Navbar = () => {
             </div>
             <div className="leading-tight">
               <p className="font-semibold text-sm">Call to Schedule!</p>
-              <p className="text-base font-bold">+9099479474747</p>
+              <p className="text-base font-bold">+966557802506</p>
             </div>
           </div>
         </div>

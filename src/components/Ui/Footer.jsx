@@ -22,13 +22,13 @@ const Footer = () => {
               className="w-24 h-24 mx-auto lg:mx-0 rounded-full border-2 border-white shadow-md mb-4"
             />
             <p className="text-sm text-gray-300 leading-relaxed">
-              <strong className="text-white">Clock Tower Laundry</strong>
+              <strong className="text-white">Laundry King</strong>
               <br />
-              123 Main Street, Dhaka, Bangladesh
+              Clock Tower, Makkah, Saudi Arabia
               <br />
-              info@clocktowerlaundry.com
+              rifatshikder056@gmail
               <br />
-              +880 1774 647257
+              +966557802506
             </p>
           </div>
 
@@ -96,9 +96,9 @@ const Footer = () => {
             <p className="text-sm text-gray-300 leading-relaxed">
               Got questions or need help? We're here for you 24/7.
               <br />
-              Email: support@clocktowerlaundry.com
+              Email: rifatshikder056@gmail
               <br />
-              Hotline: +880 1999 123456
+              Hotline: +966557802506
             </p>
           </div>
         </div>
@@ -106,8 +106,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-white/20 pt-6 text-center text-sm text-gray-400">
           <p>
-            &copy; {new Date().getFullYear()} Clock Tower Laundry. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} Laundry King. All rights reserved.
           </p>
           <p className="mt-2">
             Designed & Developed by{" "}

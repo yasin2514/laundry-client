@@ -47,7 +47,7 @@ const Banner = () => {
             transition={{ duration: 1.2, delay: 0.9 }}
             className="text-sm sm:text-base md:text-lg italic mb-6 text-purple-300 font-bold"
           >
-            Clock Tower Laundry — Reliable, Quick & Affordable.
+            LaundryKing — Reliable, Quick & Affordable.
           </motion.p>
 
           {/* Highlights */}
@@ -63,7 +63,7 @@ const Banner = () => {
 
           {/* WhatsApp Button */}
           <motion.a
-            href={`https://wa.me/8801774647257?text=${encodeURIComponent(
+            href={`https://wa.me/966557802506?text=${encodeURIComponent(
               whatsappMessage
             )}`}
             target="_blank"
