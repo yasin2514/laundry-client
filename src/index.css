@@ -1,3 +1,15 @@
+/* Add some vertical spacing between slides in vertical mode */
+.slick-vertical .slick-slide {
+    /* margin-bottom: 15px; */
+    outline: none; /* remove blue outline on focus */
+  }
+  
+  /* Make sure each slide takes proper height */
+  .slick-slide > div {
+    height: 400px !important; /* same as your card height */
+  }
+  
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

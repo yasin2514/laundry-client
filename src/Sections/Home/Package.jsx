@@ -27,24 +27,26 @@ import img14 from "../../assets/p-14.png";
 import img15 from "../../assets/p-15.png";
 import img16 from "../../assets/p-16.png";
 
-// 🔹 Custom Left Arrow
+// Custom Prev Arrow
 const PrevArrow = ({ onClick }) => (
-  <div
-    className="absolute -left-6 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer text-purple-600 hover:text-purple-700 transition-all duration-300"
+  <button
+    className="absolute -left-6 top-1/2 transform -translate-y-1/2 bg-[#584b80] hover:bg-[#6a5097] text-white rounded-full p-3 z-20 hover:scale-110 transition-all duration-300 shadow-md"
     onClick={onClick}
+    aria-label="Previous"
   >
-    <FaChevronLeft className="text-3xl hover:scale-110" />
-  </div>
+    <FaChevronLeft size={18} />
+  </button>
 );
 
-// 🔹 Custom Right Arrow
+// Custom Next Arrow
 const NextArrow = ({ onClick }) => (
-  <div
-    className="absolute -right-6 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer text-purple-600 hover:text-purple-700 transition-all duration-300"
+  <button
+    className="absolute -right-6 top-1/2 transform -translate-y-1/2 bg-[#584b80] hover:bg-[#6a5097] text-white rounded-full p-3 z-20 hover:scale-110 transition-all duration-300 shadow-md"
     onClick={onClick}
+    aria-label="Next"
   >
-    <FaChevronRight className="text-3xl hover:scale-110" />
-  </div>
+    <FaChevronRight size={18} />
+  </button>
 );
 
 const Package = () => {
@@ -76,55 +78,64 @@ const Package = () => {
       "Urgent Iron Only",
     ],
   }));
-  const PrevArrow = ({ onClick }) => (
-    <button
-      className="absolute -left-6 top-1/2 transform -translate-y-1/2 bg-[#584b80] hover:bg-[#6a5097] text-white rounded-full p-3 z-20 hover:scale-110 transition-all duration-300 shadow-md"
-      onClick={onClick}
-    >
-      <FaChevronLeft size={18} />
-    </button>
-  );
 
-  const NextArrow = ({ onClick }) => (
-    <button
-      className="absolute -right-6 top-1/2 transform -translate-y-1/2 bg-[#584b80] hover:bg-[#6a5097] text-white rounded-full p-3 z-20 hover:scale-110 transition-all duration-300 shadow-md"
-      onClick={onClick}
-    >
-      <FaChevronRight size={18} />
-    </button>
-  );
-  
-  
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
+    vertical: false,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 3 } },
-      { breakpoint: 768, settings: { slidesToShow: 2 } },
-      { breakpoint: 480, settings: { slidesToShow: 1 } },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          vertical: false,
+          arrows: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          vertical: true,
+          verticalSwiping: true,
+          arrows: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          vertical: true,
+          verticalSwiping: true,
+          arrows: true,
+          dots: false,
+        },
+      },
     ],
   };
-  
 
   const handleContactNow = (productName) => {
-    const wpNumber = "966557802506"; // Updated WhatsApp number
+    const wpNumber = "966557802506"; // WhatsApp number
     const message = `Hello, I am interested in your ${productName}.`;
     const url = `https://wa.me/${wpNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
-  
 
   return (
     <section
       id="packages"
       className="relative py-16 bg-white text-gray-800 overflow-hidden"
     >
-      {/* 🔵 Background Animated Shapes */}
+      {/* Background Animated Shapes */}
       <motion.div
         className="absolute top-[-50px] right-[-60px] w-72 h-72 bg-purple-100 rounded-full z-0"
         animate={{ scale: [1, 1.2, 1] }}
@@ -143,7 +154,7 @@ const Package = () => {
         transition={{ duration: 5, repeat: Infinity }}
       ></motion.div>
 
-      {/* 🔷 Main Content */}
+      {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
         <h2 className="text-4xl mb-10 font-extrabold text-[#6a5097] sm:text-4xl">
           Our Laundry Packages
@@ -159,7 +170,7 @@ const Package = () => {
             {products.map((product) => (
               <div key={product.id} className="px-3 py-5">
                 <div className="relative border shadow-md hover:shadow-2xl border-gray-300 overflow-hidden bg-white rounded-2xl h-[360px] group transition-all duration-500 flex flex-col">
-                  {/* 🖼️ Product Image */}
+                  {/* Product Image */}
                   <div
                     className="w-full transition-all duration-500 group-hover:h-[120px] mt-3"
                     style={{
@@ -172,13 +183,13 @@ const Package = () => {
                     }}
                   ></div>
 
-                  {/* 📄 Product Details */}
+                  {/* Product Details */}
                   <div className="flex flex-col justify-between flex-grow px-4 py-4 bg-white relative">
                     <h4 className="text-lg font-bold text-[#6a5097] text-center mb-2">
                       {product.name}
                     </h4>
 
-                    {/* 🔽 Description List */}
+                    {/* Description List */}
                     <div className="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[200px] transition-all duration-500 overflow-hidden mb-3">
                       <ul className="text-sm text-gray-600 text-left space-y-2">
                         {product.description.map((item, index) => (
@@ -190,7 +201,7 @@ const Package = () => {
                       </ul>
                     </div>
 
-                    {/* 📞 Contact Button */}
+                    {/* Contact Button */}
                     <button
                       onClick={() => handleContactNow(product.name)}
                       className="mt-auto bg-[#6a5097] hover:bg-[#584b80] text-white py-2 px-4 rounded-full text-sm flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105"
