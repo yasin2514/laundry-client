@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import img from "../../assets/i-1.jpg";
+import img from "../../assets/i-2.jpg";
 import { FaCheckCircle, FaPhoneAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import AutoSliderCards from "../../components/Ui/AutoSliderCards";
@@ -58,11 +58,13 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <img
-            src={img}
-            alt="Laundry Woman"
-            className="rounded-2xl w-full h-auto transform transition-transform duration-500 ease-in-out hover:scale-105"
-          />
+          <div className="max-h-[450px]">
+            <img
+              src={img}
+              alt="Laundry Woman"
+              className="rounded-2xl w-full h-auto transform transition-transform duration-500 ease-in-out hover:scale-105"
+            />
+          </div>
           <div className="absolute bottom-5 left-5 bg-[#6a5097] text-white px-5 py-2 rounded-full text-lg font-bold shadow-md animate-bounce">
             25 years of experience
           </div>
@@ -107,7 +109,7 @@ const About = () => {
           </ul>
 
           <div className="flex items-center text-[#6a5097] font-bold text-lg">
-            <FaPhoneAlt className="mr-2" /> 1 (800) 765-43-21
+            <FaPhoneAlt className="mr-2" /> +966557802506
           </div>
         </motion.div>
       </div>

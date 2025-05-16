@@ -70,7 +70,7 @@ const ContactUs = () => {
               <MdLocalLaundryService />
             </div>
             <h3 className="text-xl font-semibold text-[#6a5097] mb-2">
-              Why Choose Clock Tower Laundry?
+              Why Choose Laundry King?
             </h3>
             <p className="text-gray-700 text-base flex-grow">
               Our experienced team uses premium detergents, handles garments
@@ -98,7 +98,7 @@ const ContactUs = () => {
               WhatsApp. Quick, reliable, and always available.
             </p>
             <a
-              href={`https://wa.me/8801774647257?text=${encodeURIComponent(
+              href={`https://wa.me/966557802506?text=${encodeURIComponent(
                 whatsappMessage
               )}`}
               target="_blank"
@@ -130,8 +130,8 @@ const ContactUs = () => {
             </p>
             <div className="w-full h-48 rounded-md overflow-hidden border">
               <iframe
-                title="Clock Tower Laundry Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.8464979242713!2d90.39133857484215!3d23.75395707868095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b90145e4e223%3A0xf9cfd1a3a71b7e0d!2sClock%20Tower!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+                title="Laundry King Location"
+                src="https://www.google.com/maps?q=clock+tower+makkah+saudi+arabia&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -152,15 +152,15 @@ const ContactUs = () => {
         >
           <div className="flex items-center gap-3 text-gray-700 text-base">
             <FaPhoneAlt className="text-[#6a5097]" />
-            <span>+880 1774 647 257</span>
+            <span>+966 5578 02506</span>
           </div>
           <div className="flex items-center gap-3 text-gray-700 text-base">
             <FaEnvelope className="text-[#6a5097]" />
-            <span>info@clocktowerlaundry.com</span>
+            <span>rifatshikder056@gmail.com</span>
           </div>
           <div className="flex items-center gap-3 text-gray-700 text-base">
             <HiOutlineSupport className="text-[#6a5097]" />
-            <span>Support Hours: 8am - 10pm (Everyday)</span>
+            <span>Support Hours: Open 24 hours</span>
           </div>
         </motion.div>
       </div>
