@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import logo from "../../assets/react.svg"; // Replace with your actual logo path
+import logo from "../../assets/logo-1.png"; 
 
 const Footer = () => {
   return (
@@ -19,7 +19,7 @@ const Footer = () => {
             <img
               src={logo}
               alt="Company Logo"
-              className="w-24 h-24 mx-auto lg:mx-0 rounded-full border-2 border-white shadow-md mb-4"
+              className="w-20 h-20 mx-auto lg:mx-0 rounded-full border-2 border-white shadow-md mb-4"
             />
             <p className="text-sm text-gray-300 leading-relaxed">
               <strong className="text-white">Laundry King</strong>

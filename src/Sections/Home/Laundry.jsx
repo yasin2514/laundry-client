@@ -53,7 +53,7 @@ const Laundry = () => {
           viewport={{ once: true }}
           className="lg:w-1/2 lg:pl-12 text-left mt-0"
         >
-          <h2 className="text-4xl mb-10 font-extrabold text-[#6a5097] sm:text-4xl sm:leading-10">
+          <h2 className="text-4xl mb-10 mt-10 text-center lg:text-start lg:mt-0 font-extrabold text-[#6a5097] sm:text-4xl sm:leading-10">
             We Make Laundry Easy
           </h2>
           <p className="mt-6 max-w-2xl text-base text-gray-700 flex-grow sm:mt-4">

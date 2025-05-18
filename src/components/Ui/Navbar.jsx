@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { FaWhatsapp, FaBars, FaTimes } from "react-icons/fa";
-
+import logo from "../../assets/logo-1.png";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -12,7 +12,8 @@ const Navbar = () => {
     <div id="home" className="w-full bg-[#4b3f6e] shadow-md z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 lg:px-8 py-4">
         {/* Logo */}
-        <div className="flex-1">
+        <div className="flex-1 flex items-center gap-2">
+          <img src={logo} alt="Company Logo" className="w-14 h-14 " />
           <a className="text-2xl font-bold text-white cursor-pointer">
             LaundryKing
           </a>
