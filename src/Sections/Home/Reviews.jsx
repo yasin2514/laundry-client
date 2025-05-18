@@ -126,7 +126,7 @@ const Reviews = () => {
           <Slider ref={sliderRef} {...settings}>
             {reviewsData.map((review) => (
               <div key={review.id} className="px-3 py-10">
-                <div className="relative bg-white px-6 pt-16 pb-8 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col md:h-[380px] xl:h-[300px] ">
+                <div className="relative bg-white px-6 pt-16 pb-8 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col md:h-[380px] xl:h-[300px] min-h-[300px]">
                   {/* Avatar Image */}
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                     <img

@@ -112,11 +112,11 @@ const Package = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 12,
+          slidesToScroll: 0,
           vertical: true,
-          verticalSwiping: true,
-          arrows: true,
+          verticalSwiping: false,
+          arrows: false,
           dots: false,
         },
       },
