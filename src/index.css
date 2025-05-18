@@ -2,10 +2,10 @@
 
 .carousel .control-dots {
     position: relative; /* ✅ Ensures dots stay below, not floating */
-    margin-top: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
+    bottom: 0px;
   }
   
   .carousel .control-dots .dot {

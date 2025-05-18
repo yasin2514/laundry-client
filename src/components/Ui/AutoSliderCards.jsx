@@ -47,7 +47,7 @@ const AutoSliderCards = () => {
   }, []);
 
   return (
-    <div className="mt-16 max-w-7xl mx-auto pb-20">
+    <div className="mt-16 max-w-7xl mx-auto ">
       <Carousel
         showThumbs={false}
         showStatus={false}
@@ -68,13 +68,15 @@ const AutoSliderCards = () => {
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: idx * 0.2 }}
-            className="bg-gradient-to-br from-purple-100 to-white shadow-xl rounded-3xl p-8 text-center border border-purple-200 w-[94%] mx-auto min-h-[220px] flex flex-col justify-start"
+            className=" w-[94%] mx-auto min-h-[300px] flex flex-col justify-start "
           >
-            {card.icon}
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              {card.title}
-            </h3>
-            <p className="text-gray-600 text-sm">{card.desc}</p>
+            <div className="bg-gradient-to-br from-purple-100 to-white shadow-xl rounded-3xl p-8 text-center border border-purple-200 min-h-[220px] ">
+              {card.icon}
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                {card.title}
+              </h3>
+              <p className="text-gray-600 text-sm">{card.desc}</p>
+            </div>
           </motion.div>
         ))}
       </Carousel>
