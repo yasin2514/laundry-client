@@ -1,41 +1,53 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import { motion } from "framer-motion";
 import { FaCheckCircle, FaMoneyBillAlt, FaClock } from "react-icons/fa";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const AutoSliderCards = () => {
+  const [slidePercentage, setSlidePercentage] = useState(50);
+
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
   };
 
- const infoCards = [
-  {
-    icon: <FaClock className="text-[#6a5097] text-4xl mb-3 mx-auto" />,
-    title: "Save Time & Money",
-    desc: "No more wasted time driving to laundromats. We pickup and deliver for free! Our efficient process ensures you save both time and money while enjoying fresh, clean clothes. Let us handle the laundry so you can focus on what matters most.",
-  },
-  {
-    icon: <FaMoneyBillAlt className="text-[#6a5097] text-4xl mb-3 mx-auto" />,
-    title: "Pay Online in Seconds",
-    desc: "Manage your account and billing online from any device. Our secure payment system makes transactions quick and hassle-free. Schedule, track, and pay — all in just a few taps!",
-  },
-  {
-    icon: <FaClock className="text-[#6a5097] text-4xl mb-3 mx-auto" />,
-    title: "Fast Turnaround",
-    desc: "Get your laundry back fresh and folded within 24 hours. We work around the clock to meet tight schedules without compromising quality. Perfect for busy individuals, families, and professionals.",
-  },
-  {
-    icon: <FaCheckCircle className="text-[#6a5097] text-4xl mb-3 mx-auto" />,
-    title: "Satisfaction Guarantee",
-    desc: "We make sure every customer is fully satisfied with our service. If something’s not right, we’ll make it right — it’s that simple. Your comfort and trust are our top priorities.",
-  },
-];
+  const infoCards = [
+    {
+      icon: <FaClock className="text-[#6a5097] text-4xl mb-3 mx-auto" />,
+      title: "Save Time & Money",
+      desc: "Avoid trips to the laundromat — we pick up and deliver for free. Our fast, affordable service gives you more time and saves you money every week.",
+    },
+    {
+      icon: <FaMoneyBillAlt className="text-[#6a5097] text-4xl mb-3 mx-auto" />,
+      title: "Pay Online Easily",
+      desc: "Enjoy secure, fast payments from any device. Manage your billing, schedule pickups, and track your orders — all in just a few clicks.",
+    },
+    {
+      icon: <FaClock className="text-[#6a5097] text-4xl mb-3 mx-auto" />,
+      title: "Quick Turnaround",
+      desc: "We return your clothes clean and folded within 24 hours. Perfect for busy lifestyles and last-minute laundry needs.",
+    },
+    {
+      icon: <FaCheckCircle className="text-[#6a5097] text-4xl mb-3 mx-auto" />,
+      title: "Guaranteed Satisfaction",
+      desc: "Your happiness matters. If you're not satisfied, we’ll make it right — no questions asked. Quality and care you can count on.",
+    },
+  ];
+  
+  useEffect(() => {
+    const updateSlidePercentage = () => {
+      const width = window.innerWidth;
+      setSlidePercentage(width < 768 ? 100 : 50); // 100% on small screens, 50% on larger
+    };
 
+    updateSlidePercentage();
+    window.addEventListener("resize", updateSlidePercentage);
+    return () => window.removeEventListener("resize", updateSlidePercentage);
+  }, []);
 
   return (
-    <div className="mt-16 max-w-7xl mx-auto">
+    <div className="mt-16 max-w-7xl mx-auto ">
       <Carousel
         showThumbs={false}
         showStatus={false}
@@ -44,10 +56,9 @@ const AutoSliderCards = () => {
         autoPlay
         interval={3000}
         centerMode
-        centerSlidePercentage={50} // Display two cards at a time
+        centerSlidePercentage={slidePercentage}
         swipeable
         emulateTouch
-        className="gap-6" // Adds gap between the cards
       >
         {infoCards.map((card, idx) => (
           <motion.div
@@ -56,7 +67,7 @@ const AutoSliderCards = () => {
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: idx * 0.2 }}
-            className="bg-gradient-to-br from-purple-100 to-white shadow-xl rounded-3xl p-8 text-center border border-purple-200 w-[94%]  mx-auto" // Set width to 47% and height to 200px
+            className="bg-gradient-to-br from-purple-100 to-white shadow-xl rounded-3xl p-8 text-center border border-purple-200 w-[94%] mx-auto min-h-[220px] flex flex-col justify-start"
           >
             {card.icon}
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
