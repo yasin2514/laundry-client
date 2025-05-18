@@ -9,7 +9,10 @@ import { motion } from "framer-motion";
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-[#ecf2ff] text-gray-800">
+    <section
+      id="services"
+      className="py-20 bg-[#ecf2ff] px-4 sm:px-6 lg:px-0 text-gray-800"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <motion.h2

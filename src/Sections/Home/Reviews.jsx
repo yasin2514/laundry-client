@@ -87,7 +87,7 @@ const settings = {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
-        vertical: true,
+        vertical: false,
         verticalSwiping: true,
         arrows: true,
         dots: false,
