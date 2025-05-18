@@ -165,7 +165,7 @@ const Package = () => {
           clothes are cleaned, pressed, and delivered with care and efficiency.
         </p>
 
-        <div className="relative">
+        <div className="relative px-3 lg:px-0">
           <Slider ref={sliderRef} {...settings}>
             {products.map((product) => (
               <div key={product.id} className="px-3 py-5">

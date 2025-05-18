@@ -14,7 +14,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex-1">
           <a className="text-2xl font-bold text-white cursor-pointer">
-            LaundryPro
+            LaundryKing
           </a>
         </div>
 

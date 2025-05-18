@@ -34,11 +34,11 @@ const AutoSliderCards = () => {
       desc: "Your happiness matters. If you're not satisfied, we’ll make it right — no questions asked. Quality and care you can count on.",
     },
   ];
-  
+
   useEffect(() => {
     const updateSlidePercentage = () => {
       const width = window.innerWidth;
-      setSlidePercentage(width < 768 ? 100 : 50); // 100% on small screens, 50% on larger
+      setSlidePercentage(width < 768 ? 100 : 50);
     };
 
     updateSlidePercentage();
@@ -47,11 +47,12 @@ const AutoSliderCards = () => {
   }, []);
 
   return (
-    <div className="mt-16 max-w-7xl mx-auto ">
+    <div className="mt-16 max-w-7xl mx-auto pb-20">
       <Carousel
         showThumbs={false}
         showStatus={false}
         showArrows={false}
+        showIndicators={true}
         infiniteLoop
         autoPlay
         interval={3000}

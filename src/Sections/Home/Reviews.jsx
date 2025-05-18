@@ -122,7 +122,7 @@ const Reviews = () => {
           satisfaction is our motivation.
         </p>
 
-        <div className="relative">
+        <div className="relative px-3 lg:px-0">
           <Slider ref={sliderRef} {...settings}>
             {reviewsData.map((review) => (
               <div key={review.id} className="px-3 py-10">

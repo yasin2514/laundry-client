@@ -1,4 +1,28 @@
+/* AutoSliderCards.css */
 
+.carousel .control-dots {
+    position: relative; /* ✅ Ensures dots stay below, not floating */
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel .control-dots .dot {
+    background: #a855f7 !important; /* Tailwind Purple-500 */
+    opacity: 0.4;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .carousel .control-dots .dot.selected {
+    opacity: 1;
+  }
+  
+  
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
