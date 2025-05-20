@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import logo from "../../assets/logo-1.png"; 
+import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+import logo from "../../assets/logo-1.png";
 
 const Footer = () => {
   return (
@@ -51,45 +52,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company Policies */}
-          <div className="text-center lg:text-left">
-            <h4 className="text-lg font-semibold mb-4">Company Policy</h4>
-            <ul className="space-y-2 text-sm text-gray-200">
-              <li>
-                <a
-                  href="#privacy-policy"
-                  className="hover:text-yellow-300 transition"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#terms-conditions"
-                  className="hover:text-yellow-300 transition"
-                >
-                  Terms & Conditions
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#refund-policy"
-                  className="hover:text-yellow-300 transition"
-                >
-                  Refund Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#delivery-policy"
-                  className="hover:text-yellow-300 transition"
-                >
-                  Delivery Policy
-                </a>
-              </li>
-            </ul>
-          </div>
-
           {/* Contact Info */}
           <div className="text-center lg:text-left">
             <h4 className="text-lg font-semibold mb-4">Contact & Support</h4>
@@ -100,6 +62,30 @@ const Footer = () => {
               <br />
               Hotline: +966557802506
             </p>
+          </div>
+
+          {/* WhatsApp & Call Section */}
+          <div className="text-center lg:text-left">
+            <h4 className="text-lg font-semibold mb-4">Chat & Call</h4>
+            <div className="space-y-3">
+              <a
+                href="https://wa.me/966557802506"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-green-500 hover:from-purple-600 hover:to-pink-600 text-white text-sm px-5 py-2.5 rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                <FaWhatsapp className="text-lg" />
+                Message on WhatsApp
+              </a>
+              <br />
+              <a
+                href="tel:+966557802506"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-sm px-5 py-2.5 rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                <FaPhoneAlt className="text-sm" />
+                Call Now
+              </a>
+            </div>
           </div>
         </div>
 
